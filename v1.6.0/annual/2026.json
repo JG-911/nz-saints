@@ -1,0 +1,136 @@
+{
+  "releaseVersion": "1.6.0",
+  "year": 2026,
+  "entries": [
+    {
+      "id": "unity",
+      "startDate": "2026-05-14",
+      "endDate": "2026-05-24",
+      "textId": "unity",
+      "display": {
+        "title": "Prayer for Christian Unity"
+      }
+    },
+    {
+      "id": "pentecost-preparation",
+      "startDate": "2026-05-15",
+      "endDate": "2026-05-23",
+      "textId": "pentecost-preparation",
+      "display": {
+        "title": "Preparation for Pentecost"
+      }
+    },
+    {
+      "id": "ordinands-may",
+      "startDate": "2026-05-25",
+      "endDate": "2026-05-30",
+      "textId": "ordinands",
+      "display": {
+        "title": "Prayer for the Ministry of the Church and Ordinands"
+      }
+    },
+    {
+      "id": "ordinands-november",
+      "startDate": "2026-11-23",
+      "endDate": "2026-11-29",
+      "textId": "ordinands",
+      "display": {
+        "title": "Prayer for the Ministry of the Church and Ordinands"
+      }
+    },
+    {
+      "id": "rogation-3",
+      "startDate": "2026-10-03",
+      "endDate": "2026-10-03",
+      "textId": "rogation",
+      "display": {
+        "title": "Prayer for Work and Conservation"
+      }
+    },
+    {
+      "id": "rogation-5",
+      "startDate": "2026-10-05",
+      "endDate": "2026-10-05",
+      "textId": "rogation",
+      "display": {
+        "title": "Prayer for Work and Conservation"
+      }
+    },
+    {
+      "id": "disability",
+      "startDate": "2026-06-21",
+      "endDate": "2026-06-21",
+      "textId": "disability",
+      "display": {
+        "title": "Disability Awareness Sunday",
+        "localNote": "May be deferred locally when it coincides with a feast."
+      }
+    },
+    {
+      "id": "refugee",
+      "startDate": "2026-07-05",
+      "endDate": "2026-07-05",
+      "textId": "refugee",
+      "display": {
+        "title": "Refugee Sunday"
+      }
+    },
+    {
+      "id": "sea",
+      "startDate": "2026-07-12",
+      "endDate": "2026-07-12",
+      "textId": "sea",
+      "display": {
+        "title": "Sea Sunday",
+        "localNote": "May be observed on another local Sunday."
+      }
+    },
+    {
+      "id": "social-services",
+      "startDate": "2026-07-26",
+      "endDate": "2026-07-26",
+      "textId": "social-services",
+      "display": {
+        "title": "Social Services Sunday"
+      }
+    },
+    {
+      "id": "new-year",
+      "startDate": "2026-01-01",
+      "endDate": "2026-01-01",
+      "textId": "new-year",
+      "display": {
+        "title": "New Year’s Day"
+      },
+      "selectedRecordId": "01-01-2"
+    },
+    {
+      "id": "waitangi",
+      "startDate": "2026-02-06",
+      "endDate": "2026-02-06",
+      "textId": "waitangi",
+      "display": {
+        "title": "Waitangi Day"
+      }
+    },
+    {
+      "id": "naming-of-jesus",
+      "startDate": "2026-01-01",
+      "endDate": "2026-01-01",
+      "textId": "naming-of-jesus",
+      "display": {
+        "title": "The Naming of Jesus"
+      },
+      "selectedRecordId": "01-01-1"
+    },
+    {
+      "id": "mothering",
+      "startDate": "2026-03-15",
+      "endDate": "2026-03-15",
+      "textId": "mothering",
+      "display": {
+        "title": "Mothering Sunday"
+      }
+    }
+  ]
+}
