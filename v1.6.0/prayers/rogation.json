@@ -1,0 +1,31 @@
+{
+  "releaseVersion": "1.6.0",
+  "id": "rogation",
+  "display": {
+    "explanation": "Rogation Days invite prayer for the earth’s resources and for daily work. The NZ calendar places them on either side of St Francis of Assisi’s day, connecting work with care for creation.",
+    "prompt": "Pray for the care of creation and for those whose work sustains our communities.",
+    "sentences": [
+      {
+        "label": "Sentence",
+        "text": "May your favour O Lord our God be upon us, and prosper the work of our hands.",
+        "reference": "Psalm 90: 17"
+      },
+      {
+        "label": "Post-communion sentence",
+        "text": "You Lord will give prosperity, and our land shall yield its harvest.",
+        "reference": "Psalm 85: 12"
+      }
+    ],
+    "collects": [
+      {
+        "text": "Gracious God,\nthe source of all good,\nyou have provided the resources of the world\nto maintain the life of your children,\nand have so ordered our life\nthat we are dependent on one another;\nbless all people in their daily work,\nand as you have given us the knowledge\nto produce plenty,\nso give us the will to make it available to all;\nthrough Jesus Christ our Saviour."
+      },
+      {
+        "text": "God of our beautiful country,\ngive us care and skill\nin cultivating and managing\nwhat you have given us,\nand we shall make it truly\nyour own land."
+      },
+      {
+        "text": "Everloving God,\nyou have so ordered the world\nthat it produces its fruits in their seasons;\nguide the labours of all who work\non the land or at sea,\nin our industries and business houses,\nthat we may use the resources of the earth\nto your glory,\nfor our own well-being,\nand for the relief of those in need;\nthrough Jesus Christ our Lord."
+      }
+    ]
+  }
+}

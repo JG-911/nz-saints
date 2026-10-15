@@ -1,0 +1,155 @@
+{
+  "releaseVersion": "1.6.0",
+  "id": "mothering",
+  "display": {
+    "explanation": "Mothering Sunday gives thanks for the care we receive and invites prayer for those who nurture others.",
+    "prompt": "Pray for mothers and all who offer care, and for those for whom this day is difficult.",
+    "editions": [
+      {
+        "edition": "current",
+        "sourceId": "current",
+        "entryId": "current-43",
+        "sentences": [
+          {
+            "label": "Sentence",
+            "text": "‘As a mother comforts her child, so will I comfort you, and you shall be comforted in Jerusalem,’ says the Lord. Isaiah 66:13",
+            "reference": "",
+            "language": "en-NZ"
+          },
+          {
+            "label": "Post-communion sentence",
+            "text": "Jerusalem above is free, and she is our mother. Galatians 4:26",
+            "reference": "",
+            "language": "en-NZ"
+          }
+        ],
+        "collects": [
+          {
+            "text": "Everloving God,\nyour care for us is greater\neven than a mother’s love for her child;\nteach us to value a mother’s love\nand see in it an expression of your grace,\nthat we may ever feel more deeply your love for us\nin Christ Jesus our Saviour.",
+            "language": "en-NZ",
+            "edition": "current"
+          },
+          {
+            "text": "Blessed are you, God of strength and patience;\nyours is the love our mothers showed us,\nyours the care we need;\nas we learn to care for one another\nand to share your love,\nmay it be with our mother we share it\nfirst of all.",
+            "language": "en-NZ",
+            "edition": "current"
+          }
+        ],
+        "readings": [
+          {
+            "label": "Psalms",
+            "references": [
+              "Psalm 84",
+              "or Psalm 122"
+            ]
+          },
+          {
+            "label": "Readings",
+            "references": [
+              "Isaiah 49:13–16",
+              "Ephesians 3:14–21",
+              "Luke 2:40–52"
+            ]
+          }
+        ]
+      },
+      {
+        "edition": "historical",
+        "sourceId": "historical-special",
+        "entryId": "historical-special-10",
+        "sentences": [
+          {
+            "label": "Sentence",
+            "text": "‘As a mother comforts her child, so will I comfort you, and you shall be comforted in Jerusalem,’ says the Lord. Isaiah 66:13",
+            "reference": "",
+            "language": "en-NZ"
+          },
+          {
+            "label": "Post-communion sentence",
+            "text": "Jerusalem above is free, and she is our mother. Galatians 4:26",
+            "reference": "",
+            "language": "en-NZ"
+          }
+        ],
+        "collects": [
+          {
+            "text": "Everloving God,\nyour care for us is greater\neven than a mother’s love for her child;\nteach us to value a mother’s love\nand see in it an expression of your grace,\nthat we may ever feel more deeply your love for us\nin Christ Jesus our Saviour.",
+            "language": "en-NZ",
+            "edition": "historical"
+          },
+          {
+            "text": "Blessed are you, God of strength and patience;\nyours is the love our mothers showed us,\nyours the care we need;\nas we learn to care for one another\nand to share your love,\nmay it be with our mother we share it\nfirst of all.",
+            "language": "en-NZ",
+            "edition": "historical"
+          }
+        ],
+        "readings": []
+      }
+    ],
+    "sentences": [
+      {
+        "label": "Sentence",
+        "text": "‘As a mother comforts her child, so will I comfort you, and you shall be comforted in Jerusalem,’ says the Lord. Isaiah 66:13",
+        "reference": "",
+        "language": "en-NZ"
+      },
+      {
+        "label": "Post-communion sentence",
+        "text": "Jerusalem above is free, and she is our mother. Galatians 4:26",
+        "reference": "",
+        "language": "en-NZ"
+      },
+      {
+        "label": "Sentence",
+        "text": "‘As a mother comforts her child, so will I comfort you, and you shall be comforted in Jerusalem,’ says the Lord. Isaiah 66:13",
+        "reference": "",
+        "language": "en-NZ"
+      },
+      {
+        "label": "Post-communion sentence",
+        "text": "Jerusalem above is free, and she is our mother. Galatians 4:26",
+        "reference": "",
+        "language": "en-NZ"
+      }
+    ],
+    "collects": [
+      {
+        "text": "Everloving God,\nyour care for us is greater\neven than a mother’s love for her child;\nteach us to value a mother’s love\nand see in it an expression of your grace,\nthat we may ever feel more deeply your love for us\nin Christ Jesus our Saviour.",
+        "language": "en-NZ",
+        "edition": "current"
+      },
+      {
+        "text": "Blessed are you, God of strength and patience;\nyours is the love our mothers showed us,\nyours the care we need;\nas we learn to care for one another\nand to share your love,\nmay it be with our mother we share it\nfirst of all.",
+        "language": "en-NZ",
+        "edition": "current"
+      },
+      {
+        "text": "Everloving God,\nyour care for us is greater\neven than a mother’s love for her child;\nteach us to value a mother’s love\nand see in it an expression of your grace,\nthat we may ever feel more deeply your love for us\nin Christ Jesus our Saviour.",
+        "language": "en-NZ",
+        "edition": "historical"
+      },
+      {
+        "text": "Blessed are you, God of strength and patience;\nyours is the love our mothers showed us,\nyours the care we need;\nas we learn to care for one another\nand to share your love,\nmay it be with our mother we share it\nfirst of all.",
+        "language": "en-NZ",
+        "edition": "historical"
+      }
+    ],
+    "readings": [
+      {
+        "label": "Psalms",
+        "references": [
+          "Psalm 84",
+          "or Psalm 122"
+        ]
+      },
+      {
+        "label": "Readings",
+        "references": [
+          "Isaiah 49:13–16",
+          "Ephesians 3:14–21",
+          "Luke 2:40–52"
+        ]
+      }
+    ]
+  }
+}

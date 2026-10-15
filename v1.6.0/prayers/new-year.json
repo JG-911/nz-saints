@@ -1,0 +1,116 @@
+{
+  "releaseVersion": "1.6.0",
+  "id": "new-year",
+  "display": {
+    "explanation": "At the beginning of the civil year, give thanks for God’s faithfulness and pray for renewal in the days ahead.",
+    "prompt": "Pray for courage, hope and openness to God as the new year begins.",
+    "sentences": [
+      {
+        "label": "Sentence",
+        "text": "There is salvation in no one else, for there is no other name under heaven given among us by which we must be saved. Acts 4:12",
+        "reference": "",
+        "language": "en-NZ"
+      }
+    ],
+    "collects": [
+      {
+        "text": "Eternal God,\nto whom a thousand years are no more than a moment;\nrenew us in your Holy Spirit,\nso that we may serve you with courage\nwhile we have life and breath;\nthrough the grace of Jesus your Son our Saviour.\nAmen.",
+        "language": "en-NZ",
+        "edition": "current"
+      },
+      {
+        "text": "God of time and eternity,\nas we enter this new year\nday by day\nopen us to your new age.\nHear this prayer for your love's sake.\nAmen.",
+        "language": "en-NZ",
+        "edition": "current"
+      },
+      {
+        "text": "Eternal God,\nto whom a thousand years are no more than a moment;\nrenew us in your Holy Spirit,\nso that we may serve you with courage\nwhile we have life and breath;\nthrough the grace of Jesus your Son.",
+        "language": "en-NZ",
+        "edition": "historical"
+      },
+      {
+        "text": "God of time and eternity,\nas we enter this new year\nday by day\nopen us to your new age.",
+        "language": "en-NZ",
+        "edition": "historical"
+      }
+    ],
+    "readings": [
+      {
+        "label": "Psalms",
+        "references": [
+          "Psalm 8"
+        ]
+      },
+      {
+        "label": "Readings",
+        "references": [
+          "Ecclesiastes 3:1–13",
+          "Revelation 21:1–6a",
+          "Matthew 25:31–46"
+        ]
+      }
+    ],
+    "editions": [
+      {
+        "edition": "current",
+        "sourceId": "current",
+        "entryId": "current-2",
+        "sentences": [
+          {
+            "label": "Sentence",
+            "text": "There is salvation in no one else, for there is no other name under heaven given among us by which we must be saved. Acts 4:12",
+            "reference": "",
+            "language": "en-NZ"
+          }
+        ],
+        "collects": [
+          {
+            "text": "Eternal God,\nto whom a thousand years are no more than a moment;\nrenew us in your Holy Spirit,\nso that we may serve you with courage\nwhile we have life and breath;\nthrough the grace of Jesus your Son our Saviour.\nAmen.",
+            "language": "en-NZ",
+            "edition": "current"
+          },
+          {
+            "text": "God of time and eternity,\nas we enter this new year\nday by day\nopen us to your new age.\nHear this prayer for your love's sake.\nAmen.",
+            "language": "en-NZ",
+            "edition": "current"
+          }
+        ],
+        "readings": [
+          {
+            "label": "Psalms",
+            "references": [
+              "Psalm 8"
+            ]
+          },
+          {
+            "label": "Readings",
+            "references": [
+              "Ecclesiastes 3:1–13",
+              "Revelation 21:1–6a",
+              "Matthew 25:31–46"
+            ]
+          }
+        ]
+      },
+      {
+        "edition": "historical",
+        "sourceId": "historical-feasts",
+        "entryId": "historical-feasts-2",
+        "sentences": [],
+        "collects": [
+          {
+            "text": "Eternal God,\nto whom a thousand years are no more than a moment;\nrenew us in your Holy Spirit,\nso that we may serve you with courage\nwhile we have life and breath;\nthrough the grace of Jesus your Son.",
+            "language": "en-NZ",
+            "edition": "historical"
+          },
+          {
+            "text": "God of time and eternity,\nas we enter this new year\nday by day\nopen us to your new age.",
+            "language": "en-NZ",
+            "edition": "historical"
+          }
+        ],
+        "readings": []
+      }
+    ]
+  }
+}

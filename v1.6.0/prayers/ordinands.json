@@ -1,0 +1,37 @@
+{
+  "releaseVersion": "1.6.0",
+  "id": "ordinands",
+  "display": {
+    "explanation": "Ember Days are periods of prayer for the Church’s ministry, both ordained and lay, for vocations, and for those preparing for ordination or commissioning.",
+    "prompt": "Pray for those preparing for ordination, those who guide them, and all who serve in the ministry of the Church.",
+    "sentences": [
+      {
+        "label": "Sentence",
+        "text": "Ask the Lord of the harvest to send out labourers to harvest the crop.",
+        "reference": "Luke 10: 2 (adapted)"
+      },
+      {
+        "label": "Post-communion sentence",
+        "text": "Jesus said, “I appointed you to go and bear fruit, fruit that will last.”",
+        "reference": "John 15: 16"
+      }
+    ],
+    "collects": [
+      {
+        "text": "Holy Spirit,\nwe pray you, comfort and encourage\nall deacons and priests\nand the men and women soon to find themselves ordained;\nmay they bring joy and comfort from the Scriptures;\nmay they bring strength\nthrough the risen body and the saving blood of Jesus.",
+        "category": "For deacons, priests and those to be ordained"
+      },
+      {
+        "text": "Gracious God,\nthe giver of all good gifts,\nby your Holy Spirit you have appointed\nvarious orders of ministry in your church;\nhear our prayers for all deacons and priests\nand for those to be ordained to those offices;\nmaintain them in truth\nand renew them in holiness,\nthat they may faithfully serve you\nto the glory of your name\nand the good of your church;\nthrough Jesus Christ our Saviour."
+      },
+      {
+        "text": "Everloving God,\nyour Son entrusted his followers\nwith a ministry of love and healing in the world;\ninspire the hearts of many\nto give themselves to the exercise\nof responsible leadership in your church,\nthat we may witness to your grace\nand bring all people within your commonwealth of love;\nthrough Jesus Christ our Redeemer.",
+        "category": "For lay ministers with particular responsibilities in the church"
+      },
+      {
+        "text": "Praise to you,\nGod of the eternal promise,\nfor the caring men and women\nwho dedicate themselves,\nwith and through your church,\nto bring the gospel to those around them;\nmay the people hear;\nmay they hear good news.",
+        "category": "For lay ministers with particular responsibilities in the church"
+      }
+    ]
+  }
+}

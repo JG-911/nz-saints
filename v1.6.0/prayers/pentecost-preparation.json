@@ -1,0 +1,26 @@
+{
+  "releaseVersion": "1.6.0",
+  "id": "pentecost-preparation",
+  "display": {
+    "explanation": "These nine days invite prayer and preparation for Pentecost, when the Church celebrates the gift of the Holy Spirit.",
+    "prompt": "Pray for the renewal of the Church through the Holy Spirit.",
+    "sentences": [
+      {
+        "label": "Sentence",
+        "text": "Let the heart of those who seek the Lord rejoice; turn for help to the Lord your strength and constantly seek God’s presence.",
+        "reference": "Psalm 105: 3, 4"
+      },
+      {
+        "label": "Post Communion",
+        "text": "Jesus said, “Those who lose their life for my sake will find it.”",
+        "reference": "Matthew 10: 39"
+      }
+    ],
+    "collects": [
+      {
+        "label": "Collect",
+        "text": "Gracious and loving God,\nyour Son Jesus Christ\nprepared himself by vigil and prayer\nfor his work and witness;\nstrengthen us in heart and mind\nby this remembrance of your grace\nto bear witness to your great love\nand to work for your kingdom;\nthrough Jesus Christ our Saviour."
+      }
+    ]
+  }
+}

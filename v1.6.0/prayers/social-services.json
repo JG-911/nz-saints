@@ -1,0 +1,28 @@
+{
+  "releaseVersion": "1.6.0",
+  "id": "social-services",
+  "display": {
+    "explanation": "Social Services Sunday recognises people and organisations caring for others in our communities, and encourages thanksgiving and practical support for their work.",
+    "prompt": "Pray for those receiving support and for the people who serve them through social services.",
+    "sentences": [
+      {
+        "label": "Sentence",
+        "text": "Let justice roll down like waters, and righteousness like an everflowing stream.",
+        "reference": "Amos 5: 24"
+      },
+      {
+        "label": "Post-communion sentence",
+        "text": "Jesus said, “I have set you an example, that you also should do as I have done to you.”",
+        "reference": "John 13: 15"
+      }
+    ],
+    "collects": [
+      {
+        "text": "God of compassion, you thirst for justice;\ngive to all who follow Christ\nthe vision of your kingdom\nand the gifts of your Spirit\nto work for its coming;\nthrough the one who alone satisfies all our thirst,\nJesus Christ our Saviour."
+      },
+      {
+        "text": "Just and all-seeing God,\nyou reach out to the poor and the sick;\nyou love the criminal, the cripple, the disadvantaged,\nand those who work with them;\nhelp us to build a fair community;\nhelp us to understand your will."
+      }
+    ]
+  }
+}
