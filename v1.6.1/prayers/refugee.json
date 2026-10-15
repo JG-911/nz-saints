@@ -1,0 +1,10 @@
+{
+  "releaseVersion": "1.6.1",
+  "id": "refugee",
+  "display": {
+    "explanation": "Refugee Sunday invites prayer and action for people displaced from their homes, and for those offering welcome and support.",
+    "prompt": "Pray for refugees, for safety and belonging, and for communities offering welcome.",
+    "sentences": [],
+    "collects": []
+  }
+}

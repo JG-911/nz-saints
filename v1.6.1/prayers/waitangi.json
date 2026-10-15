@@ -1,0 +1,56 @@
+{
+  "releaseVersion": "1.6.1",
+  "id": "waitangi",
+  "display": {
+    "explanation": "Waitangi Day invites reflection on the covenant of Te Tiriti o Waitangi and prayer for justice, mutual respect and a shared future in Aotearoa.",
+    "prompt": "Pray for faithfulness to our promises, respect for one another’s taonga, and justice in our life together.",
+    "sentences": [
+      {
+        "label": "Sentence — Māori",
+        "language": "mi",
+        "text": "Anō te pai, anō te ahuareka o te nohoanga o ngā tēina o ngā tuākana i runga i te whakaaro kotahi.",
+        "reference": "Waiata 133: 1"
+      },
+      {
+        "label": "Sentence — English",
+        "language": "en-NZ",
+        "text": "How good and pleasant a thing it is when God’s people live together in unity.",
+        "reference": "Psalm 133: 1"
+      },
+      {
+        "label": "Post-communion sentence — Māori",
+        "language": "mi",
+        "text": "Ka whakatikatika e ia i ō tātou waewae ki te huarahi o te rangimārie.",
+        "reference": "Ruka 1: 79 (whakarite)"
+      },
+      {
+        "label": "Post-communion sentence — English",
+        "language": "en-NZ",
+        "text": "God will guide our feet into the way of peace.",
+        "reference": "Luke 1: 79 (adapted)"
+      }
+    ],
+    "collects": [
+      {
+        "language": "mi",
+        "text": "E te Ariki o ngā ariki,\ni mea koe\nki te ū koutou ki roto ki ahau\nka ū anō āku kupu ki roto ki a koutou.\nE pupuri tonu nei mātou\ni ngā kupu o te kawenata o te Tiriti o Waitangi\ni hainatia e ngā Māori me ngā Pākehā\ni te tau kotahi mano e waru rau e whā tekau.\nMeinga ēnei kupu i poua nei e rātou\nhei māramatanga mō ngā rā kei mua i a mātou\ne haere tika ai tēnei iwi o Aotearoa. Āmine.",
+        "label": "Collect — Te Reo Māori"
+      },
+      {
+        "language": "en-NZ",
+        "text": "God, the sovereign of all,\nyour word is law in every quarter.\nSpeak your words again;\nhold before us the words of Waitangi,\nsigned by Māori and Pākehā alike\nto seal their covenant;\nmake the treaty they established in Aotearoa\na beacon light for the days ahead;\nthrough Christ, our guide, our way.",
+        "label": "Collect 1 — English"
+      },
+      {
+        "language": "en-NZ",
+        "text": "God of our nation,\nyou have called us to care for one another;\ncleanse our eyes to see each other clearly;\nopen our hearts to know our own mistakes;\nbuild in us respect for each other’s taonga;\nhelp us to do justice to one another\nand to hope together.",
+        "label": "Collect 2 — English"
+      },
+      {
+        "language": "en-NZ",
+        "text": "God of covenant and calling,\nyou bind us together;\nkeep us faithful to our calling\nand true to our promises.",
+        "label": "Collect 3 — English"
+      }
+    ]
+  }
+}

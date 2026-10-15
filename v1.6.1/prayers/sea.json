@@ -1,0 +1,31 @@
+{
+  "releaseVersion": "1.6.1",
+  "id": "sea",
+  "display": {
+    "explanation": "Sea Sunday provides a focus for prayer for seafarers and those who support them.",
+    "prompt": "Pray for seafarers, their families, and those who offer care and support in ports.",
+    "sentences": [
+      {
+        "label": "Sentence",
+        "text": "The sea is yours, O God, and you made it; the dry land also which your hands have fashioned.",
+        "reference": "Psalm 95: 5"
+      },
+      {
+        "label": "Post-communion sentence",
+        "text": "Your path, O God, was in the sea and your way was through the great waters.",
+        "reference": "Psalm 77: 19"
+      }
+    ],
+    "collects": [
+      {
+        "text": "Eternal Lord God,\nyou alone have spread out the heavens\nand rule the raging of the sea;\nbless and keep all who go down to the sea in ships;\npreserve them in all dangers\nand bring them in safety to the haven where they would be,\nwith a thankful remembrance of your mercies,\nto praise and glorify your holy name;\nthrough Jesus Christ our Saviour."
+      },
+      {
+        "text": "Creator God,\nyou have made the sea beautiful and fearful;\nbe with all who sail on it for work or pleasure\nand give them safe passage\nwith Christ the voyager,\nwho calmed the storm\nand strengthened his disciples’ faith."
+      },
+      {
+        "text": "God of change and invention,\nbe with those whose life is spent at sea.\nIn storm, in calm, in harbour,\nbe with them.\nBe with them in danger, boredom or temptation;\nfor you are God,\nyou are our hope and strength."
+      }
+    ]
+  }
+}

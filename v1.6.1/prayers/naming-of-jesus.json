@@ -1,0 +1,155 @@
+{
+  "releaseVersion": "1.6.1",
+  "id": "naming-of-jesus",
+  "display": {
+    "explanation": "The Naming of Jesus commemorates the name given to Jesus and the salvation proclaimed in his name.",
+    "prompt": "Pray that we may honour Jesus’ name in our lives and witness.",
+    "sentences": [
+      {
+        "label": "Sentence",
+        "text": "There is salvation in no one else, for there is no other name under heaven given among us by which we must be saved. Acts 4:12",
+        "reference": "",
+        "language": "en-NZ"
+      },
+      {
+        "label": "Post-communion sentence",
+        "text": "You shall call his name Jesus, for he will save his people from their sins. Matthew 1:21",
+        "reference": "",
+        "language": "en-NZ"
+      },
+      {
+        "label": "Sentence",
+        "text": "There is salvation in no one else, for there is no other name under heaven given among us by which we must be saved. Acts 4:12",
+        "reference": "",
+        "language": "en-NZ"
+      },
+      {
+        "label": "Post-communion sentence",
+        "text": "You shall call his name Jesus, for he will save his people from their sins. Matthew 1:21",
+        "reference": "",
+        "language": "en-NZ"
+      }
+    ],
+    "collects": [
+      {
+        "text": "We thank you, Lord God, for the gift of your Son\nwhom you commanded to be called Jesus;\ngrant that we may so honour his name on earth,\nthat others may be led to him who alone is Lord and Saviour.\nAmen.",
+        "language": "en-NZ",
+        "edition": "current"
+      },
+      {
+        "text": "Praise to you, Christ our Redeemer\nfor you were circumcised this day\nand given Jesus as your name.\nPraise to you, Jesus, well are you named\nfor you save us from our sins.\nHear this prayer for your name’s sake.\nAmen.",
+        "language": "en-NZ",
+        "edition": "current"
+      },
+      {
+        "text": "We thank you, Lord God, for the gift of your Son\nwhom you commanded to be called Jesus;\ngrant that we may so honour his name on earth,\nthat others may be led to him who alone is Lord and Saviour.",
+        "language": "en-NZ",
+        "edition": "historical"
+      },
+      {
+        "text": "Praise to you, Christ our Redeemer\nfor you were circumcised this day\nand given Jesus as your name.\nPraise to you, Jesus, well are you named\nfor you save us from our sins.",
+        "language": "en-NZ",
+        "edition": "historical"
+      }
+    ],
+    "readings": [
+      {
+        "label": "Psalms",
+        "references": [
+          "Psalm 8"
+        ]
+      },
+      {
+        "label": "Readings",
+        "references": [
+          "Numbers 6:22–27",
+          "Galatians 4:4–7",
+          "or Philippians 2:5–11",
+          "Luke 2:15–21"
+        ]
+      }
+    ],
+    "editions": [
+      {
+        "edition": "current",
+        "sourceId": "current",
+        "entryId": "current-1",
+        "sentences": [
+          {
+            "label": "Sentence",
+            "text": "There is salvation in no one else, for there is no other name under heaven given among us by which we must be saved. Acts 4:12",
+            "reference": "",
+            "language": "en-NZ"
+          },
+          {
+            "label": "Post-communion sentence",
+            "text": "You shall call his name Jesus, for he will save his people from their sins. Matthew 1:21",
+            "reference": "",
+            "language": "en-NZ"
+          }
+        ],
+        "collects": [
+          {
+            "text": "We thank you, Lord God, for the gift of your Son\nwhom you commanded to be called Jesus;\ngrant that we may so honour his name on earth,\nthat others may be led to him who alone is Lord and Saviour.\nAmen.",
+            "language": "en-NZ",
+            "edition": "current"
+          },
+          {
+            "text": "Praise to you, Christ our Redeemer\nfor you were circumcised this day\nand given Jesus as your name.\nPraise to you, Jesus, well are you named\nfor you save us from our sins.\nHear this prayer for your name’s sake.\nAmen.",
+            "language": "en-NZ",
+            "edition": "current"
+          }
+        ],
+        "readings": [
+          {
+            "label": "Psalms",
+            "references": [
+              "Psalm 8"
+            ]
+          },
+          {
+            "label": "Readings",
+            "references": [
+              "Numbers 6:22–27",
+              "Galatians 4:4–7",
+              "or Philippians 2:5–11",
+              "Luke 2:15–21"
+            ]
+          }
+        ]
+      },
+      {
+        "edition": "historical",
+        "sourceId": "historical-feasts",
+        "entryId": "historical-feasts-1",
+        "sentences": [
+          {
+            "label": "Sentence",
+            "text": "There is salvation in no one else, for there is no other name under heaven given among us by which we must be saved. Acts 4:12",
+            "reference": "",
+            "language": "en-NZ"
+          },
+          {
+            "label": "Post-communion sentence",
+            "text": "You shall call his name Jesus, for he will save his people from their sins. Matthew 1:21",
+            "reference": "",
+            "language": "en-NZ"
+          }
+        ],
+        "collects": [
+          {
+            "text": "We thank you, Lord God, for the gift of your Son\nwhom you commanded to be called Jesus;\ngrant that we may so honour his name on earth,\nthat others may be led to him who alone is Lord and Saviour.",
+            "language": "en-NZ",
+            "edition": "historical"
+          },
+          {
+            "text": "Praise to you, Christ our Redeemer\nfor you were circumcised this day\nand given Jesus as your name.\nPraise to you, Jesus, well are you named\nfor you save us from our sins.",
+            "language": "en-NZ",
+            "edition": "historical"
+          }
+        ],
+        "readings": []
+      }
+    ]
+  }
+}

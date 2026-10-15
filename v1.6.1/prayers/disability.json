@@ -1,0 +1,52 @@
+{
+  "releaseVersion": "1.6.1",
+  "id": "disability",
+  "display": {
+    "explanation": "This observance encourages the Church to recognise disabled people’s gifts and participation, and to address barriers to belonging and access.",
+    "prompt": "Pray for churches where disabled people can belong, participate and exercise their gifts.",
+    "sentences": [
+      {
+        "label": "Sentence",
+        "text": "Those who find their life will lose it, and those who lose their life for Jesus’ sake will find it.",
+        "reference": "Matthew 10:39",
+        "sourceLabel": "Anglican Disability Network — 2026 resource",
+        "sourceUrl": "https://anglicandisability.org/files/liturgical-resource-2026-disability-awareness-sunday-resources.pdf#page=11"
+      }
+    ],
+    "collects": [
+      {
+        "text": "Holy God, grant us the\nbeginning of wisdom\nand love to cast out every\nfear:\nthat we may grow more\nbrave,\nmore ready to hear,\nmore ready to obey;\nthrough Jesus Christ our\nRedeemer.\nAmen.",
+        "sourceLabel": "A New Zealand Prayer Book (2020), p. 646; reproduced in the 2026 resource",
+        "sourceUrl": "https://anglicandisability.org/files/liturgical-resource-2026-disability-awareness-sunday-resources.pdf#page=11"
+      },
+      {
+        "text": "Passionate God, your word burns like fire within, challenging us. By our baptism, we are immersed in your resurrecting love. When we are distracted by our own human relationships and needs, fill us with an abundance of your grace, that we may respond to your radical call to justice and hope for all people. With Jesus we pray. Amen.",
+        "sourceLabel": "J. Harrison & J. McAlpine, Our Daily Bread (2011), p. 26, as credited in the 2026 resource",
+        "sourceUrl": "https://anglicandisability.org/files/liturgical-resource-2026-disability-awareness-sunday-resources.pdf#page=11"
+      }
+    ],
+    "readings": [
+      {
+        "label": "Continuous readings",
+        "references": [
+          "Genesis 21:8–21",
+          "Psalm 86:1–10, 16–17"
+        ]
+      },
+      {
+        "label": "Related readings",
+        "references": [
+          "Jeremiah 20:7–13",
+          "Psalm 69:8–11 (12–17), 18–20"
+        ]
+      },
+      {
+        "label": "New Testament and Gospel",
+        "references": [
+          "Romans 6:1–11",
+          "Matthew 10:24–39"
+        ]
+      }
+    ]
+  }
+}

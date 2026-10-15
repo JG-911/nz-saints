@@ -1,0 +1,28 @@
+{
+  "releaseVersion": "1.6.1",
+  "id": "unity",
+  "display": {
+    "explanation": "A time to pray for the unity of Christians and their shared witness to Christ.",
+    "prompt": "Pray for unity among Christians and for our shared witness to Christ.",
+    "sentences": [
+      {
+        "label": "Sentence",
+        "text": "May the God of steadfastness and encouragement grant us to live in harmony with one another in accord with Christ Jesus, so that together we may with one voice glorify the God and Father of our Lord Jesus Christ.",
+        "reference": "Romans 15: 5, 6 (adapted)"
+      },
+      {
+        "label": "Post-communion sentence",
+        "text": "There is one body and one Spirit, one Lord, one faith, one baptism, one God and Father of all, who is above all and through all and in all.",
+        "reference": "Ephesians 4: 4-6"
+      }
+    ],
+    "collects": [
+      {
+        "text": "Everloving God,\nyou have called us\nin the body of your Son Jesus Christ\nto continue his work of reconciliation\nand reveal you to all the world;\nforgive us the sins which tear us apart;\ngive us courage to overcome our fears\nand to seek that unity\nwhich is your gift and your will;\nthrough Jesus Christ our Saviour."
+      },
+      {
+        "text": "Lord Christ,\nyou command us to love one another;\nmake your people one together;\ngive us acceptance, give us trust,\nanoint us with the precious oil of your Spirit."
+      }
+    ]
+  }
+}
