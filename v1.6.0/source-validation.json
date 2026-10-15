@@ -1,0 +1,499 @@
+{
+  "releaseVersion": "1.6.0",
+  "annualResearch": [
+    {
+      "id": "unity",
+      "research": {
+        "sourceIds": [
+          "nzpb",
+          "lectionary2026"
+        ],
+        "pdfPages": [
+          73,
+          74,
+          75,
+          76,
+          77,
+          78
+        ],
+        "promptStatus": "Editorial invitation based on the official observance; not a quoted or authorised prayer.",
+        "notes": [
+          "Ascension to Pentecost inclusive, following the stated NZPB and annual Lectionary period."
+        ]
+      }
+    },
+    {
+      "id": "pentecost-preparation",
+      "research": {
+        "sourceIds": [
+          "nzpb",
+          "lectionary2026"
+        ],
+        "pdfPages": [
+          74,
+          75,
+          76,
+          77
+        ],
+        "promptStatus": "Editorial invitation based on the official observance; not a quoted or authorised prayer.",
+        "notes": [
+          "The nine days after Ascension and before Pentecost; separate from the overlapping unity period."
+        ]
+      }
+    },
+    {
+      "id": "ordinands-may",
+      "research": {
+        "sourceIds": [
+          "nzpb",
+          "lectionary2026",
+          "fasLit"
+        ],
+        "pdfPages": [
+          78,
+          79,
+          80
+        ],
+        "promptStatus": "Editorial invitation based on the official observance; not a quoted or authorised prayer.",
+        "notes": [
+          "The May rubric specifies Monday to Saturday; neither Pentecost Sunday nor 31 May is included."
+        ]
+      }
+    },
+    {
+      "id": "ordinands-november",
+      "research": {
+        "sourceIds": [
+          "nzpb",
+          "lectionary2026",
+          "fasLit"
+        ],
+        "pdfPages": [
+          142,
+          143,
+          144,
+          145
+        ],
+        "promptStatus": "Editorial invitation based on the official observance; not a quoted or authorised prayer.",
+        "notes": [
+          "The week preceding St Andrew’s Day. The annual daily listing explicitly includes Sunday 29 November; no Sunday suppression is applied."
+        ]
+      }
+    },
+    {
+      "id": "rogation-3",
+      "research": {
+        "sourceIds": [
+          "nzpb",
+          "lectionary2026",
+          "fasLit"
+        ],
+        "pdfPages": [
+          125
+        ],
+        "promptStatus": "Editorial invitation based on the official observance; not a quoted or authorised prayer.",
+        "notes": [
+          "The annual introductory note incorrectly says Monday 7 October; the Monday daily entry is 5 October. NZPB explicitly supplies 3 and 5 October. Retain those civil dates and record the error. The fixed calendar already displays these prayer-day commemorations."
+        ]
+      }
+    },
+    {
+      "id": "rogation-5",
+      "research": {
+        "sourceIds": [
+          "nzpb",
+          "lectionary2026",
+          "fasLit"
+        ],
+        "pdfPages": [
+          126
+        ],
+        "promptStatus": "Editorial invitation based on the official observance; not a quoted or authorised prayer.",
+        "notes": [
+          "Use the daily Monday 5 October listing and NZPB fixed date. Do not extend the focus to every intervening date."
+        ]
+      }
+    },
+    {
+      "id": "disability",
+      "research": {
+        "sourceIds": [
+          "lectionary2026",
+          "specialDays",
+          "disabilityNetwork2026"
+        ],
+        "pdfPages": [
+          90
+        ],
+        "promptStatus": "Editorial invitation based on the official observance; not a quoted or authorised prayer.",
+        "notes": [
+          "Third Sunday in June in the 2026 daily listing. The official Special Days page allows local deferral if it coincides with Te Pouhere Sunday or another feast; this sample uses the listed 2026 national date and does not move a saint."
+        ]
+      }
+    },
+    {
+      "id": "refugee",
+      "research": {
+        "sourceIds": [
+          "lectionary2026",
+          "specialDays"
+        ],
+        "pdfPages": [
+          94
+        ],
+        "promptStatus": "Editorial invitation based on the official observance; not a quoted or authorised prayer.",
+        "notes": [
+          "First Sunday in July, confirmed by the 2026 daily listing and official Special Days page."
+        ]
+      }
+    },
+    {
+      "id": "sea",
+      "research": {
+        "sourceIds": [
+          "lectionary2026",
+          "specialDays"
+        ],
+        "pdfPages": [
+          96
+        ],
+        "promptStatus": "Editorial invitation based on the official observance; not a quoted or authorised prayer.",
+        "notes": [
+          "Second Sunday in July in 2026. NZPB and the official resource page also allow another Sunday by local custom; local choices need supplied dates."
+        ]
+      }
+    },
+    {
+      "id": "social-services",
+      "research": {
+        "sourceIds": [
+          "lectionary2026",
+          "specialDays"
+        ],
+        "pdfPages": [
+          102
+        ],
+        "promptStatus": "Editorial invitation based on the official observance; not a quoted or authorised prayer.",
+        "notes": [
+          "Fourth Sunday in July, confirmed by NZPB, the 2026 daily listing and official Special Days page."
+        ]
+      }
+    },
+    {
+      "id": "new-year",
+      "research": {
+        "sourceIds": [
+          "nzpb",
+          "nzpbCurrentFeasts",
+          "nzpbHistoricalFeasts"
+        ],
+        "pdfPages": [
+          16
+        ],
+        "promptStatus": "Editorial invitation, not a quoted source prayer.",
+        "notes": [
+          "Explicit civil date already present in the authoritative fixed calendar; annual sample association does not alter saints."
+        ]
+      }
+    },
+    {
+      "id": "waitangi",
+      "research": {
+        "sourceIds": [
+          "nzpb",
+          "fasBio"
+        ],
+        "pdfPages": [
+          88,
+          89
+        ],
+        "promptStatus": "Editorial invitation, not a quoted source prayer.",
+        "notes": [
+          "Explicit civil date already present in the authoritative fixed calendar; annual sample association does not alter saints."
+        ]
+      }
+    },
+    {
+      "id": "naming-of-jesus",
+      "research": {
+        "sourceIds": [
+          "fasBio"
+        ],
+        "pdfPages": [
+          16,
+          17
+        ],
+        "promptStatus": "Editorial invitation, not a quoted source prayer.",
+        "notes": [
+          "Review sample switches the proper to match the selected record."
+        ]
+      }
+    },
+    {
+      "id": "mothering",
+      "research": {
+        "sourceIds": [
+          "lectionary2026",
+          "current",
+          "historical-special"
+        ],
+        "pdfPages": [
+          54
+        ],
+        "promptStatus": "Editorial invitation, not a quoted source prayer.",
+        "notes": [
+          "Official 2026 Lectionary explicitly lists Mothering Sunday on 15 March. Its CW readings are not substituted for the supplied NZPB readings."
+        ]
+      }
+    }
+  ],
+  "prayerResearch": [
+    {
+      "id": "unity",
+      "research": {
+        "sourceIds": [
+          "fasBio"
+        ],
+        "pdfPages": [
+          980,
+          981
+        ],
+        "explanationStatus": "Editorial summary, not a source quotation.",
+        "prayerStatus": "Sentences and collects transcribed from the user-supplied FAS PDF.",
+        "normalisation": "Preserve source spelling, punctuation and macrons; remove page furniture and tidy physical line spacing.",
+        "notes": []
+      }
+    },
+    {
+      "id": "pentecost-preparation",
+      "research": {
+        "sourceIds": [
+          "lectionary2026",
+          "fasBio"
+        ],
+        "pdfPages": [
+          1003
+        ],
+        "explanationStatus": "Editorial summary, not a source quotation.",
+        "prayerStatus": "Optional common preparation proper from the supplied FAS PDF, editorially selected for this sample; not a distinct nine-day Pentecost appointment.",
+        "normalisation": "Preserve source spelling, punctuation and macrons; remove page furniture and tidy physical line spacing.",
+        "notes": [
+          "Source heading: For Preparation before Feasts [Vigils], printed page 991 / PDF 1003.",
+          "The second source collect refers to tomorrow and an unnamed feast; it is excluded from the nine-day period.",
+          "No Pentecost feast-day collect has been reassigned to the whole preparation period."
+        ]
+      }
+    },
+    {
+      "id": "ordinands",
+      "research": {
+        "sourceIds": [
+          "fasBio"
+        ],
+        "pdfPages": [
+          997,
+          1000,
+          1001
+        ],
+        "explanationStatus": "Editorial summary, not a source quotation.",
+        "prayerStatus": "Sentences and collects transcribed from the user-supplied FAS PDF.",
+        "normalisation": "Preserve source spelling, punctuation and macrons; remove page furniture and tidy physical line spacing.",
+        "notes": [
+          "The source inserts Rogation pages between the first ordinands collect (PDF 997) and its remaining collects/sentence (1000–1001); the FAS liturgical edition corroborates this layout."
+        ]
+      }
+    },
+    {
+      "id": "rogation",
+      "research": {
+        "sourceIds": [
+          "fasBio"
+        ],
+        "pdfPages": [
+          998,
+          999
+        ],
+        "explanationStatus": "Editorial summary, not a source quotation.",
+        "prayerStatus": "Sentences and collects transcribed from the user-supplied FAS PDF.",
+        "normalisation": "Preserve source spelling, punctuation and macrons; remove page furniture and tidy physical line spacing.",
+        "notes": []
+      }
+    },
+    {
+      "id": "sea",
+      "research": {
+        "sourceIds": [
+          "fasBio"
+        ],
+        "pdfPages": [
+          972,
+          973
+        ],
+        "explanationStatus": "Editorial summary, not a source quotation.",
+        "prayerStatus": "Sentences and collects transcribed from the user-supplied FAS PDF.",
+        "normalisation": "Preserve source spelling, punctuation and macrons; remove page furniture and tidy physical line spacing.",
+        "notes": []
+      }
+    },
+    {
+      "id": "social-services",
+      "research": {
+        "sourceIds": [
+          "fasBio"
+        ],
+        "pdfPages": [
+          975
+        ],
+        "explanationStatus": "Editorial summary, not a source quotation.",
+        "prayerStatus": "Sentences and collects transcribed from the user-supplied FAS PDF.",
+        "normalisation": "Preserve source spelling, punctuation and macrons; remove page furniture and tidy physical line spacing.",
+        "notes": [
+          "The second collect retains historical source wording. Text is not silently modernised."
+        ]
+      }
+    },
+    {
+      "id": "disability",
+      "research": {
+        "sourceIds": [
+          "lectionary2026",
+          "specialDays",
+          "disabilityNetwork2026"
+        ],
+        "pdfPages": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "explanationStatus": "Editorial summary, not a source quotation.",
+        "prayerStatus": "Sentence and both English collects transcribed from the 2026 Disability Awareness Sunday resource, PDF page 11; not a permanent Disability Sunday proper.",
+        "normalisation": "Preserve source spelling, punctuation and macrons; remove page furniture and tidy physical line spacing.",
+        "notes": [
+          "Verified English and Māori columns visually. English only in this sample. Preserve source wording and credit Our Daily Bread page 26 as printed; that bibliographical page reference has not been independently verified.",
+          "21 June 2026; Year A, Ordinary Time 12 / Proper 7. Both OT/psalm tracks are supplied; optional parenthesised verses remain visible. Reading links include those optional verses.",
+          "Annual review recommended before each year’s observance. Do not reuse solely by A/B/C: the Sunday proper can differ. No automatic website scraping or scheduled update is installed.",
+          "Physical PDF wrapping in the prose Our Daily Bread collect is normalised to spaces; words and punctuation are unchanged."
+        ],
+        "rejectedGeneralSuggestion": {
+          "type": "Exact excerpt",
+          "sourceEntryId": "current-20",
+          "collectIndex": 1,
+          "pdfPages": [
+            51
+          ],
+          "printedPages": [
+            "723.m"
+          ],
+          "decision": "Removed at the user’s request: not specific to this observance."
+        },
+        "sourceUrl": "https://anglicandisability.org/files/liturgical-resource-2026-disability-awareness-sunday-resources.pdf",
+        "evidenceFile": "../work/sources/disability-2026-evidence.json"
+      }
+    },
+    {
+      "id": "refugee",
+      "research": {
+        "sourceIds": [
+          "lectionary2026",
+          "specialDays"
+        ],
+        "pdfPages": [],
+        "explanationStatus": "Editorial summary, not a source quotation.",
+        "prayerStatus": "No specific appointed sentence or collect established; omit general substitutes.",
+        "normalisation": "Preserve source spelling, punctuation and macrons; remove page furniture and tidy physical line spacing.",
+        "notes": [],
+        "rejectedGeneralSuggestion": {
+          "type": "Short intercession",
+          "url": "https://anglicanprayerbook.nz/147.html",
+          "locator": "Midday Prayer, printed page 162, second intercession form",
+          "printedPages": [
+            "162"
+          ],
+          "checkedOn": "2026-10-15",
+          "decision": "Removed at the user’s request: not specific to this observance."
+        }
+      }
+    },
+    {
+      "id": "new-year",
+      "research": {
+        "sourceIds": [
+          "current",
+          "historical-feasts"
+        ],
+        "materialEntryIds": [
+          "current-2",
+          "historical-feasts-2"
+        ],
+        "pdfPages": [],
+        "explanationStatus": "Editorial summary, not a source quotation.",
+        "prayerStatus": "All printed English prayers for these propers from the user-supplied current and historical NZPB PDFs. Historical readings excluded.",
+        "notes": [
+          "Source page numbers retained in nzpb-materials.review.json; not rendered."
+        ]
+      }
+    },
+    {
+      "id": "waitangi",
+      "research": {
+        "sourceIds": [
+          "fasBio"
+        ],
+        "pdfPages": [
+          88,
+          89
+        ],
+        "explanationStatus": "Editorial summary, not a source quotation.",
+        "prayerStatus": "Proper Waitangi Day sentences and collects transcribed from the user-supplied FAS PDF.",
+        "normalisation": "Preserve source spelling, punctuation and macrons; remove page furniture and tidy physical line spacing.",
+        "notes": [
+          "The absence of a biographical paragraph does not imply an absence of liturgical prayers. These are Waitangi propers, not common prayers.",
+          "User requests a bilingual Waitangi exception: English and Te Reo Māori side by side where space permits, stacked in narrow containers."
+        ]
+      }
+    },
+    {
+      "id": "naming-of-jesus",
+      "research": {
+        "sourceIds": [
+          "current",
+          "historical-feasts"
+        ],
+        "materialEntryIds": [
+          "current-1",
+          "historical-feasts-1"
+        ],
+        "pdfPages": [],
+        "explanationStatus": "Editorial summary, not a source quotation.",
+        "prayerStatus": "All printed English prayers for these propers from the user-supplied current and historical NZPB PDFs. Historical readings excluded.",
+        "notes": [
+          "Source page numbers retained in nzpb-materials.review.json; not rendered."
+        ]
+      }
+    },
+    {
+      "id": "mothering",
+      "research": {
+        "sourceIds": [
+          "current",
+          "historical-special"
+        ],
+        "materialEntryIds": [
+          "current-43",
+          "historical-special-10"
+        ],
+        "pdfPages": [],
+        "explanationStatus": "Editorial summary, not a source quotation.",
+        "prayerStatus": "All printed English prayers for these propers from the user-supplied current and historical NZPB PDFs. Historical readings excluded.",
+        "notes": [
+          "Source page numbers retained in nzpb-materials.review.json; not rendered."
+        ]
+      }
+    }
+  ],
+  "coverage": "Approved 2026 annual focuses and prayer resources. Full NZPB extraction remains in the separate review collection; unassigned common material is not automatically substituted."
+}

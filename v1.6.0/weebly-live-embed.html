@@ -1,0 +1,412 @@
+<!-- NZ Saints and Commemorations | Version 1.6.0 | calendar validated 2026-10-01 -->
+<div class="nzsc-widget" style="display:block;width:100%;max-width:100%;min-width:0;" lang="en-NZ">
+  <template>
+    <style>/* NZ Saints and Commemorations | Version 1.6.0 */
+:host {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  color-scheme: light;
+}
+*, *::before, *::after { box-sizing: border-box; }
+.nzsc-shell {
+  container-type: inline-size;
+  container-name: nzsc;
+  width: 100%;
+  min-width: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #1e293b;
+  text-align: left;
+}
+.nzsc-panel {
+  width: 100%;
+  min-width: 0;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 12px;
+  padding: clamp(12px, 3cqw, 20px);
+  box-shadow: 0 10px 25px -5px rgb(0 0 0 / 5%);
+}
+.nzsc-header { margin-bottom: 14px; padding-bottom: 12px; border-bottom: 1px solid #e2e8f0; }
+.nzsc-heading {
+  font-size: 22px;
+  font-size: clamp(20px, 5cqw, 28px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  margin: 0;
+  color: #1e293b;
+}
+.nzsc-list { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.nzsc-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #e2e8f0;
+  border-left: 5px solid #2563eb;
+  border-radius: 12px;
+  background: #fafbfd;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 3%);
+}
+.nzsc-badge {
+  flex: 0 1 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 12px 6px;
+  background: #eff6ff;
+  color: #2563eb;
+  border-right: 1px solid #e2e8f0;
+  border-radius: 7px 0 0 7px;
+  min-width: 0;
+}
+.nzsc-month { font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; }
+.nzsc-day { font-size: 24px; font-weight: 800; line-height: 1.2; }
+.nzsc-details { flex: 1 1 180px; min-width: 0; padding: 14px; }
+.nzsc-name { margin: 0; font-size: 20px; font-size: clamp(17px, 4.2cqw, 22px); line-height: 1.3; font-weight: 800; color: #020617; }
+.nzsc-year { display: inline; font-size: inherit; font-weight: 600; color: #334155; }
+.nzsc-title { margin: 6px 0 0; font-size: 15px; line-height: 1.5; color: #475569; }
+.nzsc-empty, .nzsc-error { margin: 0; padding: 12px 0; font-size: 16px; color: #475569; }
+.nzsc-heading, .nzsc-name, .nzsc-year, .nzsc-title, .nzsc-empty, .nzsc-error, .nzsc-month, .nzsc-day {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  max-width: 100%;
+}
+@container nzsc (max-width: 340px) {
+  .nzsc-card { flex-direction: column; }
+  .nzsc-badge {
+    flex: none;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 8px;
+    border-right: 0;
+    border-bottom: 1px solid #e2e8f0;
+    border-radius: 7px 7px 0 0;
+  }
+  .nzsc-details { flex: none; padding: 12px; }
+}
+@media print { .nzsc-panel { box-shadow: none; } }
+.nzsc-badge{display:grid;grid-template-rows:1fr auto 1fr;justify-items:center;gap:0}
+.nzsc-date{grid-row:2;display:flex;flex-direction:column;align-items:center;gap:4px;min-width:0}
+.nzsc-version{grid-row:3;align-self:end;font-size:10px;font-weight:400;line-height:1.3;color:#94a3b8;padding-top:6px;white-space:normal;overflow-wrap:anywhere}
+.nzsc-entry+.nzsc-entry{margin-top:18px;padding-top:14px;border-top:1px solid #e2e8f0}
+.nzsc-choice{appearance:none;border:0;background:none;color:#1d4ed8;font:inherit;font-weight:inherit;text-align:left;padding:3px 0;cursor:pointer;text-decoration:underline;text-underline-offset:4px;white-space:normal;overflow-wrap:anywhere;max-width:100%}
+.nzsc-choice[aria-pressed="true"]{color:#020617;text-decoration-thickness:3px}
+.nzsc-choice:focus-visible,summary:focus-visible{outline:3px solid #2563eb;outline-offset:3px}
+.nzsc-brief-panel{margin-top:16px;border:1px solid #cbd5e1;border-radius:10px;background:white;padding:12px;min-width:0}
+summary{cursor:pointer;font-weight:650;white-space:normal;overflow-wrap:anywhere;line-height:1.5}
+.nzsc-brief-body{min-width:0}
+.nzsc-brief-text{font-size:16px;line-height:1.65;margin:12px 0;white-space:normal;overflow-wrap:anywhere}
+.nzsc-brief-source{font-size:13px;color:#1d4ed8;white-space:normal;overflow-wrap:anywhere}
+.nzsc-alternate{display:inline;font-size:15px;font-weight:400;color:#64748b;white-space:normal;overflow-wrap:anywhere}
+@container nzsc (max-width:340px){.nzsc-badge{grid-template-rows:auto auto}.nzsc-date{grid-row:1;flex-direction:row;gap:8px}.nzsc-version{grid-row:2;text-align:center}}
+</style>
+    <div class="nzsc-shell">
+      <section class="nzsc-panel" aria-label="NZ Saints and Commemorations">
+        <header class="nzsc-header">
+          <h2 class="nzsc-heading">NZ Saints and Commemorations</h2>
+        </header>
+        <div aria-live="polite" aria-atomic="true">
+          <ul class="nzsc-list"></ul>
+          <div class="nzsc-status"></div>
+        </div>
+      </section>
+    </div>
+  </template>
+  <script type="application/json" class="nzsc-data">{"01-01":[{"name":"The Naming of Jesus","title":null,"year":null,"yearLabel":null,"recordId":"01-01-1"},{"name":"New Year’s Day","title":null,"year":null,"yearLabel":null,"recordId":"01-01-2"}],"01-02":[{"name":"Seraphim of Sarov","title":"Mystic, Russia","year":"1833","yearLabel":null,"recordId":"01-02-1"}],"01-03":[{"name":"Gladys Aylward","title":"Missionary, China","year":"1970","yearLabel":null,"recordId":"01-03-1"}],"01-04":[],"01-05":[{"name":"The Eve of the Epiphany","title":null,"year":null,"yearLabel":null,"recordId":"01-05-1"}],"01-06":[{"name":"The Epiphany of our Lord Jesus Christ","title":"The Revelation of Christ to the Gentiles","year":null,"yearLabel":null,"recordId":"01-06-1"}],"01-07":[],"01-08":[],"01-09":[],"01-10":[],"01-11":[],"01-12":[],"01-13":[{"name":"Hilary","title":"Bishop of Poitiers, Teacher of the Faith","year":"c.367","yearLabel":null,"recordId":"01-13-1"}],"01-14":[{"name":"Sava","title":"the Founder and first Archbishop of the Serbian Church","year":"1235","yearLabel":null,"recordId":"01-14-1"}],"01-15":[],"01-16":[],"01-17":[{"name":"Antony of Egypt","title":"Abbot","year":"356","yearLabel":null,"recordId":"01-17-1"}],"01-18":[],"01-19":[],"01-20":[],"01-21":[{"name":"Agnes","title":"Child-Martyr at Rome","year":"c.304","yearLabel":null,"recordId":"01-21-1"}],"01-22":[{"name":"Vincent","title":"Spanish Deacon and Martyr, Saragossa","year":"c.304","yearLabel":null,"recordId":"01-22-1"}],"01-23":[],"01-24":[],"01-25":[{"name":"The Conversion of St Paul","title":null,"year":null,"yearLabel":null,"recordId":"01-25-1"}],"01-26":[{"name":"Timothy and Titus","title":"Companions of St Paul","year":null,"yearLabel":null,"recordId":"01-26-1"}],"01-27":[{"name":"John Chrysostom","title":"Bishop of Constantinople, Teacher of the Faith","year":"407","yearLabel":null,"recordId":"01-27-1"}],"01-28":[{"name":"Thomas Aquinas","title":"Teacher of the Faith","year":"1274","yearLabel":null,"recordId":"01-28-1"}],"01-29":[],"01-30":[{"name":"King Charles of England","title":null,"year":"1649","yearLabel":null,"recordId":"01-30-1"}],"01-31":[],"02-01":[{"name":"Brigid of Ireland","title":"Abbess","year":"c.525","yearLabel":null,"recordId":"02-01-1"}],"02-02":[{"name":"The Presentation of Jesus in the Temple","title":null,"year":null,"yearLabel":null,"recordId":"02-02-1"}],"02-03":[{"name":"Anskar","title":"Archbishop of Hamburg, Missionary to Denmark and Sweden","year":"865","yearLabel":null,"recordId":"02-03-1"}],"02-04":[],"02-05":[{"name":"The Martyrs of Japan","title":null,"year":"1597","yearLabel":null,"recordId":"02-05-1"}],"02-06":[{"name":"Waitangi Day","title":null,"year":null,"yearLabel":null,"recordId":"02-06-1"}],"02-07":[],"02-08":[],"02-09":[],"02-10":[],"02-11":[],"02-12":[],"02-13":[],"02-14":[{"name":"Cyril and Methodius","title":"Missionaries to the Slavs","year":"Cyril: 869; Methodius: 885","yearLabel":null,"recordId":"02-14-1"}],"02-15":[],"02-16":[{"name":"The Holy Innocents","title":null,"year":null,"yearLabel":null,"alternateDates":["12-28"],"recordId":"02-16-1"}],"02-17":[{"name":"Janani Luwum","title":"Archbishop, Martyr of Uganda","year":"1977","yearLabel":null,"recordId":"02-17-1"}],"02-18":[{"name":"Martin Luther and other Reformers of the Church","title":null,"year":"1546","yearLabel":null,"recordId":"02-18-1"}],"02-19":[],"02-20":[{"name":"The Saints and Martyrs of Africa","title":null,"year":null,"yearLabel":null,"recordId":"02-20-1"}],"02-21":[],"02-22":[{"name":"The Confession of St Peter","title":null,"year":null,"yearLabel":null,"recordId":"02-22-1"}],"02-23":[{"name":"Polycarp","title":"Bishop of Smyrna, Martyr","year":"c.156","yearLabel":null,"recordId":"02-23-1"}],"02-24":[{"name":"St Matthias the Apostle","title":null,"year":null,"yearLabel":null,"alternateDates":["05-14"],"recordId":"02-24-1"}],"02-25":[],"02-26":[],"02-27":[{"name":"George Herbert and all saintly Parish Priests","title":null,"year":"1633","yearLabel":null,"recordId":"02-27-1"}],"02-28":[],"02-29":[],"03-01":[{"name":"David","title":"Bishop, Patron Saint of Wales","year":"c.601","yearLabel":null,"recordId":"03-01-1"}],"03-02":[{"name":"Carl Sylvius Völkner and Mokomoko","title":"Priest and Rangatira, Ōpōtiki; symbols for reconciliation","year":"1865","yearLabel":"Calendar year","recordId":"03-02-1"}],"03-03":[{"name":"John Wesley and Charles Wesley","title":"Preacher and Poet","year":"John: 1791; Charles: 1788","yearLabel":null,"recordId":"03-03-1"}],"03-04":[],"03-05":[],"03-06":[],"03-07":[{"name":"Perpetua and her Companions","title":"Martyrs at Carthage","year":"203","yearLabel":null,"recordId":"03-07-1"}],"03-08":[],"03-09":[],"03-10":[],"03-11":[],"03-12":[{"name":"Gregory the Great","title":"Bishop of Rome, Teacher of the Faith","year":"604","yearLabel":null,"recordId":"03-12-1"},{"name":"Kereopa and Manihera of Taranaki","title":"Martyrs at Turangi","year":"1847","yearLabel":null,"recordId":"03-12-2"}],"03-13":[],"03-14":[],"03-15":[],"03-16":[],"03-17":[{"name":"Patrick","title":"Bishop, Patron Saint of Ireland","year":"461","yearLabel":null,"recordId":"03-17-1"}],"03-18":[{"name":"Cyril of Jerusalem","title":"Bishop, Teacher of the Faith","year":"386","yearLabel":null,"recordId":"03-18-1"}],"03-19":[{"name":"Joseph of Nazareth","title":null,"year":null,"yearLabel":null,"recordId":"03-19-1"}],"03-20":[{"name":"Cuthbert","title":"Bishop of Lindisfarne, Missionary","year":"687","yearLabel":null,"recordId":"03-20-1"}],"03-21":[{"name":"Thomas Cranmer","title":"Archbishop of Canterbury, Liturgist and Martyr","year":"1556","yearLabel":null,"recordId":"03-21-1"}],"03-22":[{"name":"Thomas Ken","title":"Bishop of Bath and Wells, Poet","year":"1711","yearLabel":null,"recordId":"03-22-1"}],"03-23":[],"03-24":[{"name":"Gabriel","title":"Archangel","year":null,"yearLabel":null,"recordId":"03-24-1"}],"03-25":[{"name":"The Annunciation of our Saviour to the Blessed Virgin Mary","title":null,"year":null,"yearLabel":null,"recordId":"03-25-1"}],"03-26":[],"03-27":[],"03-28":[],"03-29":[{"name":"John Keble of Oxford","title":"Priest and Poet","year":"1866","yearLabel":null,"recordId":"03-29-1"}],"03-30":[],"03-31":[],"04-01":[{"name":"Frederick Denison Maurice","title":"Priest, Theologian","year":"1872","yearLabel":null,"recordId":"04-01-1"}],"04-02":[],"04-03":[{"name":"Richard of Chichester","title":"Bishop","year":"1253","yearLabel":null,"recordId":"04-03-1"}],"04-04":[{"name":"Martin Luther King","title":"Prophet","year":"1968","yearLabel":null,"recordId":"04-04-1"}],"04-05":[],"04-06":[],"04-07":[],"04-08":[{"name":"The Saints and Martyrs of the Americas","title":null,"year":null,"yearLabel":null,"recordId":"04-08-1"}],"04-09":[{"name":"Dietrich Bonhoeffer","title":"Pastor, Theologian, Germany","year":"1945","yearLabel":null,"recordId":"04-09-1"}],"04-10":[{"name":"William Law","title":"Priest, Mystic","year":"1761","yearLabel":null,"recordId":"04-10-1"}],"04-11":[{"name":"George Augustus Selwyn","title":"Bishop of New Zealand","year":"1878","yearLabel":null,"recordId":"04-11-1"}],"04-12":[],"04-13":[],"04-14":[],"04-15":[],"04-16":[],"04-17":[],"04-18":[],"04-19":[],"04-20":[],"04-21":[{"name":"Anselm","title":"Archbishop of Canterbury, Teacher of the Faith","year":"1109","yearLabel":null,"recordId":"04-21-1"}],"04-22":[],"04-23":[{"name":"George","title":"Martyr, Patron Saint of England","year":"c.304","yearLabel":null,"recordId":"04-23-1"}],"04-24":[{"name":"Toyohiko Kagawa","title":"Teacher, Evangelist, Japan","year":"1960","yearLabel":null,"recordId":"04-24-1"},{"name":"The Seven Martyrs of the Melanesian Brotherhood","title":null,"year":"2003","yearLabel":null,"recordId":"04-24-2"}],"04-25":[{"name":"Anzac Day","title":null,"year":null,"yearLabel":null,"recordId":"04-25-1"}],"04-26":[{"name":"St Mark the Evangelist","title":null,"year":null,"yearLabel":null,"recordId":"04-26-1"}],"04-27":[],"04-28":[],"04-29":[{"name":"Catherine of Siena","title":"Teacher of the Faith","year":"1380","yearLabel":null,"recordId":"04-29-1"},{"name":"Hēni Te Kirikaramu of Gate Pa","title":null,"year":"1864","yearLabel":"Calendar event","recordId":"04-29-2"}],"04-30":[],"05-01":[{"name":"St Philip and St James","title":"Apostles","year":null,"yearLabel":null,"recordId":"05-01-1"}],"05-02":[{"name":"Athanasius","title":"Bishop of Alexandria, Teacher of the Faith","year":"373","yearLabel":null,"recordId":"05-02-1"}],"05-03":[],"05-04":[],"05-05":[],"05-06":[{"name":"St John the Evangelist","title":null,"year":null,"yearLabel":null,"alternateDates":["12-27"],"recordId":"05-06-1"}],"05-07":[],"05-08":[{"name":"Dame Julian of Norwich","title":"Mystic","year":"1417","yearLabel":null,"recordId":"05-08-1"}],"05-09":[{"name":"Gregory of Nazianzus","title":"Bishop of Constantinople, Teacher of the Faith","year":"389","yearLabel":null,"recordId":"05-09-1"}],"05-10":[],"05-11":[{"name":"Ruatara","title":"Te ara mō te Rongopai ‘The gateway for the Gospel’","year":"1815","yearLabel":null,"recordId":"05-11-1"}],"05-12":[{"name":"Samuel Marsden","title":"Priest and Missionary, the Apostle of New Zealand","year":"1838","yearLabel":null,"recordId":"05-12-1"}],"05-13":[{"name":"Ihāia Te Ahu","title":"Missionary, Priest in Te Arawa","year":"1895","yearLabel":null,"recordId":"05-13-1"}],"05-14":[{"name":"Ngākūkū","title":"Missionary in Mataatua","year":null,"yearLabel":null,"recordId":"05-14-1"},{"name":"St Matthias the Apostle","title":null,"year":null,"yearLabel":null,"alternateDates":["02-24"],"recordId":"05-14-2"}],"05-15":[{"name":"Piripi Taumataākura","title":"Missionary in Ngati Porou","year":null,"yearLabel":null,"recordId":"05-15-1"}],"05-16":[{"name":"Te Wera Hauraki","title":"Missionary in Ngati Kahungunu","year":"1839","yearLabel":null,"recordId":"05-16-1"}],"05-17":[{"name":"Wiremu Te Tauri","title":"Missionary in Wanganui","year":null,"yearLabel":null,"recordId":"05-17-1"}],"05-18":[{"name":"Tāmihana Te Rauparaha","title":"Missionary","year":"1876","yearLabel":null,"recordId":"05-18-1"}],"05-19":[{"name":"Dunstan","title":"Archbishop of Canterbury and Reformer","year":"988","yearLabel":null,"recordId":"05-19-1"}],"05-20":[],"05-21":[],"05-22":[{"name":"Rota Waitoa","title":"Te mātāmua o ngā minita Māori. The first Māori ordained in New Zealand","year":"1853","yearLabel":"Ordination","recordId":"05-22-1"}],"05-23":[{"name":"Frederick Augustus Bennett","title":"Te mātāmua o ngā pihopa Māori. The first Māori Bishop","year":"1950","yearLabel":null,"recordId":"05-23-1"}],"05-24":[{"name":"Mother Edith","title":"Founder of the Community of the Sacred Name, Christchurch","year":"1922","yearLabel":null,"recordId":"05-24-1"}],"05-25":[{"name":"The Venerable Bede of Jarrow","title":"Teacher of the Faith","year":"735","yearLabel":null,"recordId":"05-25-1"}],"05-26":[{"name":"Augustine","title":"first Archbishop of Canterbury, Missionary","year":"605","yearLabel":null,"recordId":"05-26-1"}],"05-27":[],"05-28":[],"05-29":[],"05-30":[{"name":"Apolo Kivebulaya of Uganda","title":"Priest and Missionary","year":"1933","yearLabel":null,"recordId":"05-30-1"}],"05-31":[{"name":"The Visitation of Mary to Elizabeth","title":null,"year":null,"yearLabel":null,"alternateDates":["07-02"],"recordId":"05-31-1"}],"06-01":[{"name":"Justin","title":"Martyr at Rome","year":"c.165","yearLabel":null,"recordId":"06-01-1"}],"06-02":[],"06-03":[{"name":"The Martyrs of Uganda","title":null,"year":"1886","yearLabel":null,"recordId":"06-03-1"}],"06-04":[],"06-05":[{"name":"Boniface","title":"Bishop of Mainz, Missionary, Martyr","year":"754","yearLabel":null,"recordId":"06-05-1"}],"06-06":[{"name":"Ini Kopuria","title":"Founder of the Melanesian Brotherhood","year":"1945","yearLabel":null,"recordId":"06-06-1"}],"06-07":[],"06-08":[],"06-09":[{"name":"Columba of Iona","title":"Abbot, Missionary","year":"597","yearLabel":null,"recordId":"06-09-1"}],"06-10":[],"06-11":[{"name":"St Barnabas the Apostle","title":null,"year":null,"yearLabel":null,"recordId":"06-11-1"}],"06-12":[],"06-13":[{"name":"Antony of Padua","title":"Missionary, Preacher, Teacher of the Faith","year":"1231","yearLabel":null,"recordId":"06-13-1"}],"06-14":[{"name":"Basil the Great","title":"Bishop of Caesarea in Cappadocia, Teacher of the Faith","year":"379","yearLabel":null,"recordId":"06-14-1"}],"06-15":[{"name":"Evelyn Underhill","title":"Mystic","year":"1941","yearLabel":null,"recordId":"06-15-1"}],"06-16":[],"06-17":[],"06-18":[],"06-19":[{"name":"Sadhu Sundar Singh","title":"Teacher, Evangelist, India","year":"1929","yearLabel":null,"recordId":"06-19-1"}],"06-20":[],"06-21":[{"name":"Hēnare Wiremu Taratoa of Te Ranga","title":null,"year":"1864","yearLabel":null,"recordId":"06-21-1"}],"06-22":[{"name":"Alban","title":"first Martyr of Britain","year":"c.304","yearLabel":null,"recordId":"06-22-1"}],"06-23":[{"name":"Wiremu Tamihana","title":"Prophet, Kingmaker","year":"1866","yearLabel":null,"recordId":"06-23-1"}],"06-24":[{"name":"St John the Baptist","title":null,"year":null,"yearLabel":null,"recordId":"06-24-1"}],"06-25":[],"06-26":[],"06-27":[],"06-28":[{"name":"Irenaeus","title":"Bishop of Lyons, Teacher of the Faith","year":"c.200","yearLabel":null,"recordId":"06-28-1"}],"06-29":[{"name":"St Peter and St Paul","title":"Apostles, Martyrs","year":null,"yearLabel":null,"recordId":"06-29-1"}],"06-30":[],"07-01":[],"07-02":[{"name":"The Visitation of Mary to Elizabeth","title":null,"year":null,"yearLabel":null,"alternateDates":["05-31"],"recordId":"07-02-1"}],"07-03":[{"name":"St Thomas","title":"Apostle, Martyr","year":null,"yearLabel":null,"alternateDates":["12-21"],"recordId":"07-03-1"}],"07-04":[{"name":"Samuel Azariah","title":"Bishop, Ecumenist","year":"1945","yearLabel":null,"recordId":"07-04-1"}],"07-05":[],"07-06":[{"name":"Thomas More","title":"Scholar","year":"1535","yearLabel":null,"recordId":"07-06-1"}],"07-07":[],"07-08":[],"07-09":[],"07-10":[],"07-11":[{"name":"Benedict of Nursia","title":"Abbot of Monte Cassino","year":"c.550","yearLabel":null,"recordId":"07-11-1"}],"07-12":[],"07-13":[{"name":"Silas","title":"Companion of St Paul","year":null,"yearLabel":null,"recordId":"07-13-1"}],"07-14":[],"07-15":[{"name":"Swithun","title":"Bishop of Winchester","year":"c.862; Translated 971","yearLabel":null,"recordId":"07-15-1"}],"07-16":[{"name":"Henry Williams","title":"Missionary","year":"1867","yearLabel":null,"recordId":"07-16-1"}],"07-17":[],"07-18":[],"07-19":[],"07-20":[],"07-21":[],"07-22":[{"name":"St Mary Magdalene","title":null,"year":null,"yearLabel":null,"recordId":"07-22-1"}],"07-23":[],"07-24":[],"07-25":[{"name":"St James and St John","title":"Apostles","year":null,"yearLabel":null,"recordId":"07-25-1"},{"name":"Christopher","title":"Martyr","year":"c.250","yearLabel":null,"recordId":"07-25-2"}],"07-26":[{"name":"Anne","title":"Mother of the Blessed Virgin Mary","year":null,"yearLabel":null,"recordId":"07-26-1"}],"07-27":[],"07-28":[{"name":"Mary and Martha of Bethany","title":null,"year":null,"yearLabel":null,"recordId":"07-28-1"}],"07-29":[{"name":"William Wilberforce and All Social Reformers","title":null,"year":"1833","yearLabel":null,"recordId":"07-29-1"}],"07-30":[{"name":"The Saints and Martyrs of Europe","title":null,"year":null,"yearLabel":null,"recordId":"07-30-1"}],"07-31":[{"name":"Joseph of Arimathea","title":null,"year":null,"yearLabel":null,"recordId":"07-31-1"}],"08-01":[],"08-02":[{"name":"Chad","title":"Bishop of Lichfield, Missionary","year":"672","yearLabel":null,"recordId":"08-02-1"}],"08-03":[{"name":"St Stephen the First Martyr","title":null,"year":null,"yearLabel":null,"alternateDates":["12-26"],"recordId":"08-03-1"}],"08-04":[{"name":"John Baptist Vianney","title":"Curé d’Ars, Priest","year":"1859","yearLabel":null,"recordId":"08-04-1"}],"08-05":[{"name":"Oswald","title":"King of Northumbria, Martyr","year":"642","yearLabel":null,"recordId":"08-05-1"}],"08-06":[{"name":"The Transfiguration of the Beloved Son","title":null,"year":null,"yearLabel":null,"recordId":"08-06-1"}],"08-07":[{"name":"The Holy Name of Jesus","title":null,"year":null,"yearLabel":null,"recordId":"08-07-1"}],"08-08":[{"name":"Dominic","title":"Priest","year":"1221","yearLabel":null,"recordId":"08-08-1"},{"name":"Mary MacKillop","title":"Teacher","year":"1909","yearLabel":null,"recordId":"08-08-2"}],"08-09":[{"name":"Mary Sumner","title":"Founder of the Mothers’ Union","year":"1921","yearLabel":null,"recordId":"08-09-1"}],"08-10":[{"name":"Laurence","title":"Deacon and Martyr at Rome","year":"258","yearLabel":null,"recordId":"08-10-1"}],"08-11":[{"name":"Clare of Assisi","title":"Abbess","year":"1253","yearLabel":null,"recordId":"08-11-1"}],"08-12":[],"08-13":[{"name":"Florence Nightingale","title":"Nurse, Social Reformer","year":"1910","yearLabel":null,"recordId":"08-13-1"}],"08-14":[{"name":"Maximilian Kolbe","title":"Priest, Martyr, Auschwitz","year":"1941","yearLabel":null,"recordId":"08-14-1"}],"08-15":[{"name":"St Mary, the Mother of Jesus","title":null,"year":null,"yearLabel":null,"recordId":"08-15-1"}],"08-16":[{"name":"Holy Women of the Old Testament","title":null,"year":null,"yearLabel":null,"recordId":"08-16-1"},{"name":"Brother Roger of Taizé","title":"Encourager of Youth","year":"2005","yearLabel":null,"recordId":"08-16-2"}],"08-17":[],"08-18":[],"08-19":[],"08-20":[{"name":"Bernard of Clairvaux","title":"Abbot, Poet","year":"1153","yearLabel":null,"recordId":"08-20-1"}],"08-21":[],"08-22":[],"08-23":[{"name":"Rose of Lima","title":"Mystic","year":"1617","yearLabel":null,"recordId":"08-23-1"}],"08-24":[{"name":"St Bartholomew (Nathanael) the Apostle","title":null,"year":null,"yearLabel":null,"recordId":"08-24-1"}],"08-25":[],"08-26":[],"08-27":[{"name":"Monica","title":"Mother of Augustine of Hippo","year":"387","yearLabel":null,"recordId":"08-27-1"}],"08-28":[{"name":"Augustine","title":"Bishop of Hippo, Teacher of the Faith","year":"430","yearLabel":null,"recordId":"08-28-1"}],"08-29":[{"name":"The Beheading of St John the Baptist","title":null,"year":null,"yearLabel":null,"recordId":"08-29-1"}],"08-30":[],"08-31":[{"name":"Aidan","title":"Bishop of Lindisfarne, Missionary","year":"651","yearLabel":null,"recordId":"08-31-1"}],"09-01":[{"name":"The Builders of the Anglican Church in Aotearoa, New Zealand and Polynesia","title":null,"year":null,"yearLabel":null,"recordId":"09-01-1"}],"09-02":[{"name":"The Martyrs of Papua New Guinea","title":null,"year":"1942","yearLabel":null,"recordId":"09-02-1"}],"09-03":[],"09-04":[{"name":"Albert Schweitzer","title":"Medical Missionary, Theologian","year":"1965","yearLabel":null,"recordId":"09-04-1"}],"09-05":[{"name":"Mother Teresa of Calcutta","title":"Missionary of Charity","year":"1997","yearLabel":null,"recordId":"09-05-1"}],"09-06":[{"name":"Charles Fox","title":"Scholar, Missionary","year":"1977","yearLabel":null,"recordId":"09-06-1"}],"09-07":[{"name":"The Saints and Martyrs of the Pacific","title":null,"year":null,"yearLabel":null,"recordId":"09-07-1"}],"09-08":[{"name":"The Birth of the Blessed Virgin Mary","title":"Mother of our Lord","year":null,"yearLabel":null,"recordId":"09-08-1"}],"09-09":[],"09-10":[],"09-11":[],"09-12":[],"09-13":[{"name":"Cyprian","title":"Bishop of Carthage, Martyr","year":"258","yearLabel":null,"recordId":"09-13-1"}],"09-14":[{"name":"Holy Cross Day","title":null,"year":null,"yearLabel":null,"recordId":"09-14-1"}],"09-15":[],"09-16":[{"name":"Ninian","title":"Bishop in Galloway, Missionary","year":"c.432","yearLabel":null,"recordId":"09-16-1"}],"09-17":[{"name":"Hildegarde of Bingen","title":"Mystic, Religious","year":"1179","yearLabel":null,"recordId":"09-17-1"}],"09-18":[],"09-19":[{"name":"Theodore of Tarsus","title":"Archbishop of Canterbury","year":"690","yearLabel":null,"recordId":"09-19-1"}],"09-20":[{"name":"John Coleridge Patteson","title":"first Bishop of Melanesia, Martyr","year":"1871","yearLabel":null,"recordId":"09-20-1"}],"09-21":[{"name":"St Matthew","title":"Apostle, Evangelist","year":null,"yearLabel":null,"recordId":"09-21-1"}],"09-22":[],"09-23":[{"name":"Churchill Julius","title":"Bishop, first Archbishop of New Zealand","year":"1938","yearLabel":null,"recordId":"09-23-1"}],"09-24":[],"09-25":[{"name":"Sergius of Radonezh","title":"Abbot of Holy Trinity, Moscow","year":"1392","yearLabel":null,"recordId":"09-25-1"}],"09-26":[{"name":"Lancelot Andrewes","title":"Bishop of Winchester","year":"1626","yearLabel":null,"recordId":"09-26-1"}],"09-27":[{"name":"The Martyrs of Melanesia","title":null,"year":null,"yearLabel":null,"recordId":"09-27-1"}],"09-28":[],"09-29":[{"name":"St Michael and All Angels","title":null,"year":null,"yearLabel":null,"recordId":"09-29-1"}],"09-30":[{"name":"Jerome","title":"Priest, Teacher of the Faith, Translator of the Scriptures","year":"420","yearLabel":null,"recordId":"09-30-1"}],"10-01":[{"name":"Suzanne Aubert","title":"Religious, Social Reformer","year":"1926","yearLabel":null,"recordId":"10-01-1"}],"10-02":[{"name":"The Holy Guardian Angels","title":null,"year":null,"yearLabel":null,"recordId":"10-02-1"}],"10-03":[{"name":"Days of Prayer for Work and Conservation","title":null,"year":null,"yearLabel":null,"recordId":"10-03-1"}],"10-04":[{"name":"Francis of Assisi","title":"Friar","year":"1226","yearLabel":null,"recordId":"10-04-1"}],"10-05":[{"name":"Days of Prayer for Work and Conservation","title":null,"year":null,"yearLabel":null,"recordId":"10-05-1"}],"10-06":[{"name":"The Saints and Martyrs of Asia","title":null,"year":null,"yearLabel":null,"recordId":"10-06-1"}],"10-07":[{"name":"William Tyndale","title":"Translator of the Scriptures, Martyr","year":"1536","yearLabel":null,"recordId":"10-07-1"}],"10-08":[{"name":"Bridget (Birgitta) of Sweden","title":"Mystic, Religious, Patron Saint of Sweden","year":"1373","yearLabel":null,"recordId":"10-08-1"}],"10-09":[{"name":"Robert Grosseteste","title":"Bishop of Lincoln","year":"1253","yearLabel":null,"recordId":"10-09-1"}],"10-10":[],"10-11":[],"10-12":[{"name":"Elizabeth Fry","title":"Prison Reformer, England","year":"1845","yearLabel":null,"recordId":"10-12-1"}],"10-13":[],"10-14":[],"10-15":[{"name":"Teresa of Avila","title":"Teacher of the Faith","year":"1582","yearLabel":null,"recordId":"10-15-1"}],"10-16":[{"name":"The English Reformers and Martyrs","title":null,"year":"1555","yearLabel":null,"recordId":"10-16-1"}],"10-17":[{"name":"Ignatius","title":"Bishop of Antioch, Martyr","year":"c.107","yearLabel":null,"recordId":"10-17-1"}],"10-18":[{"name":"St Luke the Evangelist","title":null,"year":null,"yearLabel":null,"recordId":"10-18-1"}],"10-19":[{"name":"Tarore of Waharoa","title":null,"year":"1836","yearLabel":null,"recordId":"10-19-1"}],"10-20":[{"name":"Henry Martyn","title":"Missionary","year":"1812","yearLabel":null,"recordId":"10-20-1"}],"10-21":[],"10-22":[],"10-23":[{"name":"James of Jerusalem","title":"Brother of the Lord, Martyr","year":"c.62","yearLabel":null,"recordId":"10-23-1"}],"10-24":[{"name":"Raphael","title":"Archangel","year":null,"yearLabel":null,"recordId":"10-24-1"},{"name":"United Nations Day","title":null,"year":null,"yearLabel":null,"recordId":"10-24-2"}],"10-25":[],"10-26":[{"name":"Alfred","title":"King of the West Saxons","year":"899","yearLabel":null,"recordId":"10-26-1"}],"10-27":[],"10-28":[{"name":"St Simon and St Jude","title":"Apostles","year":null,"yearLabel":null,"recordId":"10-28-1"}],"10-29":[],"10-30":[{"name":"Holy Women of the New Testament","title":null,"year":null,"yearLabel":null,"recordId":"10-30-1"}],"10-31":[],"11-01":[{"name":"All Saints’ Day","title":null,"year":null,"yearLabel":null,"recordId":"11-01-1"}],"11-02":[{"name":"All Souls’ Day","title":null,"year":null,"yearLabel":null,"recordId":"11-02-1"}],"11-03":[{"name":"Martin of Porres","title":"Monk, Peru","year":"1639","yearLabel":null,"recordId":"11-03-1"}],"11-04":[{"name":"Richard Hooker","title":"Priest, Theologian","year":"1600","yearLabel":null,"recordId":"11-04-1"}],"11-05":[],"11-06":[{"name":"Te Whiti o Rongomai","title":"Prophet","year":"1907","yearLabel":null,"recordId":"11-06-1"}],"11-07":[{"name":"Willibrord","title":"Archbishop of Utrecht, Missionary","year":"739","yearLabel":null,"recordId":"11-07-1"}],"11-08":[{"name":"The Saints and Martyrs of the Anglican Communion","title":null,"year":null,"yearLabel":null,"recordId":"11-08-1"}],"11-09":[],"11-10":[{"name":"Leo the Great","title":"Bishop of Rome, Teacher of the Faith","year":"461","yearLabel":null,"recordId":"11-10-1"}],"11-11":[{"name":"Martin","title":"Bishop of Tours","year":"397","yearLabel":null,"recordId":"11-11-1"}],"11-12":[{"name":"Charles Simeon of Cambridge","title":"Priest","year":"1836","yearLabel":null,"recordId":"11-12-1"}],"11-13":[],"11-14":[],"11-15":[],"11-16":[{"name":"Margaret","title":"Queen of Scotland","year":"1093","yearLabel":null,"recordId":"11-16-1"}],"11-17":[{"name":"Hilda","title":"Abbess of Whitby","year":"680","yearLabel":null,"recordId":"11-17-1"}],"11-18":[{"name":"Hugh","title":"Bishop of Lincoln","year":"1200","yearLabel":null,"recordId":"11-18-1"}],"11-19":[{"name":"Elizabeth of Hungary","title":"Princess","year":"1231","yearLabel":null,"recordId":"11-19-1"}],"11-20":[{"name":"Mechtild of Magdeburg","title":"Mystic, Prophet","year":"1280","yearLabel":null,"recordId":"11-20-1"}],"11-21":[],"11-22":[{"name":"Cecilia","title":"Martyr at Rome","year":"c.230","yearLabel":null,"recordId":"11-22-1"},{"name":"C.S. Lewis","title":"Apologist","year":"1963","yearLabel":null,"recordId":"11-22-2"}],"11-23":[{"name":"Clement","title":"Bishop of Rome, Martyr","year":"c.100","yearLabel":null,"recordId":"11-23-1"}],"11-24":[],"11-25":[],"11-26":[],"11-27":[],"11-28":[],"11-29":[],"11-30":[{"name":"St Andrew","title":"Apostle, Martyr","year":null,"yearLabel":null,"recordId":"11-30-1"}],"12-01":[],"12-02":[],"12-03":[{"name":"Francis Xavier","title":"Missionary","year":"1552","yearLabel":null,"recordId":"12-03-1"}],"12-04":[],"12-05":[],"12-06":[{"name":"Nicholas","title":"Bishop of Myra","year":"c.342","yearLabel":null,"recordId":"12-06-1"}],"12-07":[{"name":"Ambrose","title":"Bishop of Milan, Teacher of the Faith","year":"397","yearLabel":null,"recordId":"12-07-1"}],"12-08":[{"name":"Richard Baxter","title":"Priest, Theologian","year":"1691","yearLabel":null,"recordId":"12-08-1"}],"12-09":[{"name":"Holy Men of the Old Testament","title":null,"year":null,"yearLabel":null,"recordId":"12-09-1"}],"12-10":[{"name":"Thomas Merton","title":"Spiritual Writer","year":"1968","yearLabel":null,"recordId":"12-10-1"}],"12-11":[{"name":"Octavius Hadfield","title":"Bishop","year":"1904","yearLabel":null,"recordId":"12-11-1"}],"12-12":[],"12-13":[{"name":"Lucy","title":"Martyr, Syracuse","year":"c.304","yearLabel":null,"recordId":"12-13-1"}],"12-14":[],"12-15":[],"12-16":[{"name":"Marianne Williams","title":"Missionary","year":"1879","yearLabel":null,"recordId":"12-16-1"}],"12-17":[],"12-18":[],"12-19":[],"12-20":[],"12-21":[{"name":"St Thomas","title":"Apostle, Martyr","year":null,"yearLabel":null,"alternateDates":["07-03"],"recordId":"12-21-1"}],"12-22":[],"12-23":[],"12-24":[{"name":"The Eve and Vigil of Christmas","title":null,"year":null,"yearLabel":null,"recordId":"12-24-1"}],"12-25":[{"name":"The Birth of our Lord Jesus Christ – Christmas Day","title":null,"year":null,"yearLabel":null,"recordId":"12-25-1"}],"12-26":[{"name":"St Stephen the First Martyr","title":null,"year":null,"yearLabel":null,"alternateDates":["08-03"],"recordId":"12-26-1"}],"12-27":[{"name":"St John the Evangelist","title":null,"year":null,"yearLabel":null,"alternateDates":["05-06"],"recordId":"12-27-1"}],"12-28":[{"name":"The Holy Innocents","title":null,"year":null,"yearLabel":null,"alternateDates":["02-16"],"recordId":"12-28-1"}],"12-29":[{"name":"Thomas of Canterbury","title":"Bishop, Martyr","year":"1170","yearLabel":null,"recordId":"12-29-1"}],"12-30":[{"name":"Josephine Butler","title":"Worker among Women","year":"1906","yearLabel":null,"recordId":"12-30-1"}],"12-31":[{"name":"John Wycliffe","title":"Theologian and Reformer","year":"1384","yearLabel":null,"recordId":"12-31-1"}]}</script>
+  
+  <noscript>NZ Saints and Commemorations requires JavaScript to display today’s New Zealand date.</noscript>
+</div>
+<script>
+(function () {
+  'use strict';
+  const host = document.currentScript.previousElementSibling;
+  const template = host.querySelector('template');
+  const calendar = JSON.parse(host.querySelector('.nzsc-data').textContent);
+  const briefConfig = {"version":"1.6.0","baseUrl":"https://jg-911.github.io/nz-saints/v1.6.0/briefs/","index":{"01-01-1":"fas-0016","01-01-2":null,"01-02-1":"fas-0020","01-03-1":"fas-0024","01-05-1":"fas-0028","01-06-1":"fas-0030","01-13-1":"fas-0034","01-14-1":"fas-0038","01-17-1":"fas-0042","01-21-1":"fas-0046","01-22-1":"fas-0050","01-25-1":"fas-0054","01-26-1":"fas-0058","01-27-1":"fas-0062","01-28-1":"fas-0066","01-30-1":"fas-0070","02-01-1":"fas-0074","02-02-1":"fas-0078","02-03-1":"fas-0082","02-05-1":"fas-0086","02-06-1":null,"02-14-1":"fas-0092","02-16-1":"fas-0096","02-17-1":"fas-0100","02-18-1":"fas-0104","02-20-1":"fas-0108","02-22-1":"fas-0112","02-23-1":"fas-0116","02-24-1":"fas-0304","02-27-1":"fas-0120","03-01-1":"fas-0124","03-02-1":"fas-0132","03-03-1":"fas-0138","03-07-1":"fas-0142","03-12-1":"fas-0146","03-12-2":"fas-0154","03-17-1":"fas-0158","03-18-1":"fas-0162","03-19-1":"fas-0166","03-20-1":"fas-0170","03-21-1":"fas-0174","03-22-1":"fas-0178","03-24-1":"fas-0182","03-25-1":"fas-0186","03-29-1":"fas-0190","04-01-1":"fas-0194","04-03-1":"fas-0198","04-04-1":"fas-0202","04-08-1":"fas-0208","04-09-1":"fas-0212","04-10-1":"fas-0216","04-11-1":"fas-0222","04-21-1":"fas-0226","04-23-1":"fas-0230","04-24-1":"fas-0234","04-24-2":"fas-0240","04-25-1":null,"04-26-1":"fas-0246","04-29-1":"fas-0250","04-29-2":"fas-0256","05-01-1":"fas-0260","05-02-1":"fas-0264","05-06-1":"fas-0268","05-08-1":"fas-0272","05-09-1":"fas-0276","05-11-1":"fas-0282","05-12-1":"fas-0288","05-13-1":"fas-0294","05-14-1":"fas-0300","05-14-2":"fas-0304","05-15-1":"fas-0310","05-16-1":"fas-0316","05-17-1":"fas-0322","05-18-1":"fas-0328","05-19-1":"fas-0332","05-22-1":"fas-0340","05-23-1":"fas-0350","05-24-1":"fas-0356","05-25-1":"fas-0360","05-26-1":"fas-0364","05-30-1":"fas-0368","05-31-1":"fas-0372","06-01-1":"fas-0376","06-03-1":"fas-0380","06-05-1":"fas-0384","06-06-1":"fas-0390","06-09-1":"fas-0394","06-11-1":"fas-0398","06-13-1":"fas-0402","06-14-1":"fas-0406","06-15-1":"fas-0410","06-19-1":"fas-0414","06-21-1":"fas-0420","06-22-1":"fas-0424","06-23-1":"fas-0430","06-24-1":"fas-0434","06-28-1":"fas-0438","06-29-1":"fas-0442","07-02-1":"fas-0372","07-03-1":"fas-0446","07-04-1":"fas-0450","07-06-1":"fas-0454","07-11-1":"fas-0458","07-13-1":"fas-0462","07-15-1":"fas-0466","07-16-1":"fas-0474","07-22-1":"fas-0478","07-25-1":"fas-0482","07-25-2":"fas-0486","07-26-1":"fas-0490","07-28-1":"fas-0494","07-29-1":"fas-0498","07-30-1":"fas-0504","07-31-1":"fas-0508","08-02-1":"fas-0514","08-03-1":"fas-0518","08-04-1":"fas-0522","08-05-1":"fas-0526","08-06-1":"fas-0530","08-07-1":"fas-0534","08-08-1":"fas-0538","08-08-2":"fas-0544","08-09-1":"fas-0550","08-10-1":"fas-0554","08-11-1":"fas-0558","08-13-1":"fas-0562","08-14-1":"fas-0566","08-15-1":"fas-0570","08-16-1":"fas-0574","08-16-2":"fas-0580","08-20-1":"fas-0584","08-23-1":"fas-0588","08-24-1":"fas-0592","08-27-1":"fas-0596","08-28-1":"fas-0600","08-29-1":"fas-0604","08-31-1":"fas-0608","09-01-1":"fas-0612","09-02-1":"fas-0616","09-04-1":"fas-0620","09-05-1":"fas-0624","09-06-1":"fas-0628","09-07-1":"fas-0634","09-08-1":"fas-0638","09-13-1":"fas-0642","09-14-1":"fas-0646","09-16-1":"fas-0650","09-17-1":"fas-0654","09-19-1":"fas-0658","09-20-1":"fas-0664","09-21-1":"fas-0668","09-23-1":"fas-0674","09-25-1":"fas-0678","09-26-1":"fas-0682","09-27-1":"fas-0686","09-29-1":"fas-0690","09-30-1":"fas-0694","10-01-1":"fas-0700","10-02-1":"fas-0704","10-03-1":null,"10-04-1":"fas-0708","10-05-1":null,"10-06-1":"fas-0712","10-07-1":"fas-0716","10-08-1":"fas-0720","10-09-1":"fas-0724","10-12-1":"fas-0728","10-15-1":"fas-0732","10-16-1":"fas-0736","10-17-1":"fas-0740","10-18-1":"fas-0744","10-19-1":"fas-0748","10-20-1":"fas-0752","10-23-1":"fas-0756","10-24-1":"fas-0760","10-24-2":null,"10-26-1":"fas-0766","10-28-1":"fas-0770","10-30-1":"fas-0774","11-01-1":"fas-0778","11-02-1":"fas-0782","11-03-1":"fas-0786","11-04-1":"fas-0790","11-06-1":"fas-0798","11-07-1":"fas-0802","11-08-1":"fas-0806","11-10-1":"fas-0810","11-11-1":"fas-0814","11-12-1":"fas-0818","11-16-1":"fas-0822","11-17-1":"fas-0826","11-18-1":"fas-0830","11-19-1":"fas-0834","11-20-1":"fas-0838","11-22-1":"fas-0842","11-22-2":"fas-0846","11-23-1":"fas-0850","11-30-1":"fas-0854","12-03-1":"fas-0858","12-06-1":"fas-0862","12-07-1":"fas-0866","12-08-1":"fas-0870","12-09-1":"fas-0874","12-10-1":"fas-0878","12-11-1":"fas-0884","12-13-1":"fas-0888","12-16-1":"fas-0892","12-21-1":"fas-0446","12-24-1":"fas-0896","12-25-1":"fas-0901","12-26-1":"fas-0518","12-27-1":"fas-0268","12-28-1":"fas-0096","12-29-1":"fas-0906","12-30-1":"fas-0910","12-31-1":"fas-0914"},"sourceUrl":"https://www.anglican.org.nz/content/download/65080/327832/file/FATS%20Full%20Bio%20Version%202%20vols%20Rev2%20as%20at%2030May19.pdf"};
+/* NZ Saints and Commemorations | Version 1.6.0 */
+/* Shared civil-date logic. Used unchanged by the embed and tests. */
+function nzSaintsCore() {
+  const zone = 'Pacific/Auckland';
+  const partsFormatter = new Intl.DateTimeFormat('en-NZ', {
+    timeZone: zone, calendar: 'gregory', numberingSystem: 'latn',
+    year: 'numeric', month: '2-digit', day: '2-digit'
+  });
+  const dateFormatter = new Intl.DateTimeFormat('en-NZ', {
+    timeZone: zone, calendar: 'gregory', numberingSystem: 'latn',
+    weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+  });
+  const monthFormatter = new Intl.DateTimeFormat('en-NZ', {
+    timeZone: zone, calendar: 'gregory', month: 'short'
+  });
+  function civilDate(instant = new Date()) {
+    if (!Number.isFinite(instant.getTime())) throw new RangeError('Invalid instant');
+    const parts = Object.fromEntries(partsFormatter.formatToParts(instant)
+      .filter(part => part.type !== 'literal').map(part => [part.type, part.value]));
+    return {
+      key: parts.month + '-' + parts.day,
+      iso: parts.year + '-' + parts.month + '-' + parts.day,
+      day: String(Number(parts.day)),
+      month: monthFormatter.format(instant),
+      label: dateFormatter.format(instant)
+    };
+  }
+  function lookup(calendar, key) {
+    return Object.prototype.hasOwnProperty.call(calendar, key) ? calendar[key] : [];
+  }
+  return { civilDate, lookup };
+}
+if (typeof module !== 'undefined' && module.exports) module.exports = nzSaintsCore;
+
+  const core = nzSaintsCore();
+/* NZ Saints and Commemorations | Version 1.6.0 */
+const shadow=host.attachShadow({mode:'open'});
+shadow.append(template.content.cloneNode(true));
+template.content.replaceChildren();template.remove();host.querySelector('.nzsc-data').remove();
+const panel=shadow.querySelector('.nzsc-panel'),list=shadow.querySelector('.nzsc-list'),status=shadow.querySelector('.nzsc-status');
+let lastDate='',selected=null,currentEntries=[],destroyed=false,generation=0,pending=null,timer=null,previewInstant=null;
+const cache=new Map();
+const makeElement=(tag,className,text='')=>{const el=document.createElement(tag);el.className=className;el.textContent=text;return el;};
+function cancel(){generation++;if(pending)pending.abort();pending=null;}
+function destroy(){if(destroyed)return;destroyed=true;host.dispatchEvent(new Event('nzsc-destroy'));cancel();cache.clear();clearInterval(timer);document.removeEventListener('visibilitychange',onVisibility);list.removeEventListener('click',onChoice);list.replaceChildren();host.nzSaintsWidget=null;}
+async function showBrief(){
+ const box=shadow.querySelector('.nzsc-brief-panel'),body=shadow.querySelector('.nzsc-brief-body');if(!box||!body)return;
+ cancel();body.replaceChildren();if(!box.open)return;
+ const id=briefConfig.index[selected];
+ if(!id){body.append(makeElement('p','nzsc-brief-text','No liturgical paragraph is supplied for this commemoration in the selected FAS PDF.'));return;}
+ const token=generation;body.append(makeElement('p','nzsc-brief-text','Loading the brief…'));
+ try{
+  let text=cache.get(id);
+  if(!text){
+   const inline=host.querySelector('[data-brief-id="'+id+'"]');
+   if(inline)text=JSON.parse(inline.textContent).brief;
+   else{
+    if(!briefConfig.baseUrl)throw new Error('not-configured');
+    pending=new AbortController();
+    const response=await fetch(new URL(id+'.json',briefConfig.baseUrl.endsWith('/')?briefConfig.baseUrl:briefConfig.baseUrl+'/'),{signal:pending.signal,credentials:'omit'});
+    if(!response.ok)throw new Error('download-failed');
+    const file=await response.json();
+    if(file.id!==id||typeof file.brief!=='string'||!file.brief.trim())throw new Error('invalid-data');text=file.brief;
+   }
+  }
+  if(destroyed||token!==generation||!box.open||!host.isConnected)return;
+  cache.set(id,text);pending=null;body.replaceChildren(makeElement('p','nzsc-brief-text',text));
+  const link=makeElement('a','nzsc-brief-source','FAS source paragraph');link.href=briefConfig.sourceUrl+'#page='+Number(id.slice(4));link.target='_blank';link.rel='noopener noreferrer';body.append(link);
+ }catch(error){
+  if(error.name==='AbortError'||token!==generation||destroyed)return;pending=null;
+  body.replaceChildren(makeElement('p','nzsc-brief-text',error.message==='not-configured'?'The brief files have not been connected yet. Use the full local preview to review the text.':'The brief could not be loaded. Close and reopen this panel to try again.'));
+ }
+}
+function onChoice(event){const button=event.target.closest('button[data-record-id]');if(!button)return;selected=button.dataset.recordId;for(const choice of shadow.querySelectorAll('.nzsc-choice'))choice.setAttribute('aria-pressed',String(choice===button));cancel();const box=shadow.querySelector('.nzsc-brief-panel');if(box){box.open=false;box.querySelector('.nzsc-brief-body').replaceChildren();}host.dispatchEvent(new Event('nzsc-selection'));}
+list.addEventListener('click',onChoice);
+function renderAt(instant=new Date()){
+ if(destroyed)return;
+ try{
+  const date=core.civilDate(instant);if(date.iso===lastDate)return;
+  cancel();cache.clear();currentEntries=core.lookup(calendar,date.key);selected=currentEntries[0]?.recordId??null;list.replaceChildren();status.replaceChildren();
+  if(currentEntries.length){
+   const card=makeElement('li','nzsc-card'),badge=makeElement('div','nzsc-badge'),dateLabel=makeElement('div','nzsc-date'),details=makeElement('div','nzsc-details');
+   badge.setAttribute('aria-hidden','true');dateLabel.append(makeElement('span','nzsc-month',date.month),makeElement('span','nzsc-day',date.day));badge.append(dateLabel,makeElement('small','nzsc-version','v'+briefConfig.version));
+   for(const entry of currentEntries){
+    const item=makeElement('div','nzsc-entry'),name=makeElement('h3','nzsc-name'),nameText=makeElement('span','nzsc-name-text',entry.name),year=entry.year?makeElement('span','nzsc-year',' ('+(entry.yearLabel?entry.yearLabel+': ':'')+entry.year+')'):null;
+    if(currentEntries.length>1){const button=makeElement('button','nzsc-choice');button.type='button';button.dataset.recordId=entry.recordId;button.setAttribute('aria-pressed',String(entry.recordId===selected));button.append(nameText);if(year)button.append(year);name.append(button);}else{name.append(nameText);if(year)name.append(year);}
+    if(entry.alternateDates?.length)name.append(makeElement('span','nzsc-alternate',' · Alternate '+entry.alternateDates.map(date=>date.split('-').reverse().join('-')).join(', ')));
+    item.append(name);if(entry.title)item.append(makeElement('p','nzsc-title',entry.title));details.append(item);
+   }
+   const box=makeElement('details','nzsc-brief-panel');box.append(makeElement('summary','','About this commemoration'));const body=makeElement('div','nzsc-brief-body');body.setAttribute('aria-live','polite');box.append(body);box.addEventListener('toggle',showBrief);details.append(box);card.append(badge,details);list.append(card);
+  }else status.append(makeElement('p','nzsc-empty','No fixed-date saint or commemoration is listed for this date.'));
+  host.dataset.civilDate=date.iso;panel.setAttribute('aria-label','NZ Saints and Commemorations, '+date.label);lastDate=date.iso;host.dispatchEvent(new Event('nzsc-render'));
+ }catch(error){cancel();cache.clear();lastDate='';delete host.dataset.civilDate;panel.setAttribute('aria-label','NZ Saints and Commemorations');list.replaceChildren();status.replaceChildren(makeElement('p','nzsc-error','The New Zealand date could not be determined. Please refresh this page.'));}
+}
+host.nzSaintsWidget=Object.freeze({refresh:renderAt,preview(instant=null){previewInstant=instant;renderAt(instant||new Date());},destroy});renderAt();
+timer=setInterval(()=>{if(!host.isConnected){destroy();return;}renderAt(previewInstant||new Date());},60000);
+function onVisibility(){if(!host.isConnected){destroy();return;}if(!document.hidden)renderAt(previewInstant||new Date());}
+document.addEventListener('visibilitychange',onVisibility);
+
+/* NZ Saints and Commemorations | Version 1.6.0 */
+function nzscPrayerMaterial(){
+ function normalise(text){return String(text||'').normalize('NFC').replace(/[‘’]/g,"'").replace(/[“”]/g,'"').replace(/[–—]/g,'-').replace(/\s+/g,' ').replace(/\s*([:,;])\s*/g,'$1').trim();}
+ function deduplicateEditions(editions){
+  const seen=new Map();
+  return editions.map(group=>{const out={...group};for(const kind of ['sentences','collects','prayers'])out[kind]=(group[kind]||[]).flatMap(item=>{
+   const role=kind==='sentences'&&item.label?.toLowerCase().startsWith('post')?'post':kind;
+   const key=role+'|'+(item.language||'en-NZ')+'|'+normalise(item.text+' '+(item.reference||''));
+   const prior=seen.get(key);if(prior)return [];
+   if(group.edition==='historical'&&kind==='collects'&&[...seen.values()].some(v=>v.sourceEdition==='current'&&v.sourceKind==='collects'&&sameCollect(v.text,item.text)))return [];
+   const value={...item,sourceEdition:group.edition,sourceKind:kind};seen.set(key,value);return [value];
+  });return out;});
+ }
+ function sameCollect(a,b){
+  const words=s=>normalise(s).replace(/blessèd/gi,'blessed').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim().split(' ');
+  const x=words(a),y=words(b);let i=0;while(i<Math.min(x.length,y.length)&&x[i]===y[i])i++;
+  const ending=s=>/^(?:|amen|our saviour(?: jesus christ)?(?: amen)?|hear this prayer for your (?:love|name) s sake(?: amen)?|this we ask through jesus christ our (?:lord|saviour)(?: amen)?|we make this prayer in the name of jesus christ our lord(?: amen)?|praise to you our god you answer prayer(?: amen)?|(?:to the honour|to the glory|for the glory) of your holy name(?: amen)?|where you reign one god for ever(?: amen)?|now and for ever(?: amen)?|for he is alive and reigns with you and the holy spirit one god (?:now and )?for ever(?: amen)?)$/.test(s);
+  return i>=12&&ending(x.slice(i).join(' '))&&ending(y.slice(i).join(' '));
+ }
+ return {normalise,sameCollect,deduplicateEditions};
+}
+if(typeof module==='object'&&module.exports)module.exports=nzscPrayerMaterial;
+
+const readingReferenceData={"chapters":{"Gen":[31,25,24,26,32,22,24,22,29,32,32,20,18,24,21,16,27,33,38,18,34,24,20,67,34,35,46,22,35,43,55,32,20,31,29,43,36,30,23,23,57,38,34,34,28,34,31,22,33,26],"Exod":[22,25,22,31,23,30,25,32,35,29,10,51,22,31,27,36,16,27,25,26,36,31,33,18,40,37,21,43,46,38,18,35,23,35,35,38,29,31,43,38],"Lev":[17,16,17,35,19,30,38,36,24,20,47,8,59,57,33,34,16,30,37,27,24,33,44,23,55,46,34],"Num":[54,34,51,49,31,27,89,26,23,36,35,16,33,45,41,50,13,32,22,29,35,41,30,25,18,65,23,31,40,16,54,42,56,29,34,13],"Deut":[46,37,29,49,33,25,26,20,29,22,32,32,18,29,23,22,20,22,21,20,23,30,25,22,19,19,26,68,29,20,30,52,29,12],"Josh":[18,24,17,24,15,27,26,35,27,43,23,24,33,15,63,10,18,28,51,9,45,34,16,33],"Judg":[36,23,31,24,31,40,25,35,57,18,40,15,25,20,20,31,13,31,30,48,25],"Ruth":[22,23,18,22],"1Sam":[28,36,21,22,12,21,17,22,27,27,15,25,23,52,35,23,58,30,24,42,15,23,29,22,44,25,12,25,11,31,13],"2Sam":[27,32,39,12,25,23,29,18,13,19,27,31,39,33,37,23,29,33,43,26,22,51,39,25],"1Kgs":[53,46,28,34,18,38,51,66,28,29,43,33,34,31,34,34,24,46,21,43,29,53],"2Kgs":[18,25,27,44,27,33,20,29,37,36,21,21,25,29,38,20,41,37,37,21,26,20,37,20,30],"1Chr":[54,55,24,43,26,81,40,40,44,14,47,40,14,17,29,43,27,17,19,8,30,19,32,31,31,32,34,21,30],"2Chr":[17,18,17,22,14,42,22,18,31,19,23,16,22,15,19,14,19,34,11,37,20,12,21,27,28,23,9,27,36,27,21,33,25,33,27,23],"Ezra":[11,70,13,24,17,22,28,36,15,44],"Neh":[11,20,32,23,19,19,73,18,38,39,36,47,31],"Esth":[22,23,15,17,14,14,10,17,32,3],"Job":[22,13,26,21,27,30,21,22,35,22,20,25,28,22,35,22,16,21,29,29,34,30,17,25,6,14,23,28,25,31,40,22,33,37,16,33,24,41,30,24,34,17],"Ps":[6,12,8,8,12,10,17,9,20,18,7,8,6,7,5,11,15,50,14,9,13,31,6,10,22,12,14,9,11,12,24,11,22,22,28,12,40,22,13,17,13,11,5,26,17,11,9,14,20,23,19,9,6,7,23,13,11,11,17,12,8,12,11,10,13,20,7,35,36,5,24,20,28,23,10,12,20,72,13,19,16,8,18,12,13,17,7,18,52,17,16,15,5,23,11,13,12,9,9,5,8,28,22,35,45,48,43,13,31,7,10,10,9,8,18,19,2,29,176,7,8,9,4,8,5,6,5,6,8,8,3,18,3,3,21,26,9,8,24,13,10,7,12,15,21,10,20,14,9,6],"Prov":[33,22,35,27,23,35,27,36,18,32,31,28,25,35,33,33,28,24,29,30,31,29,35,34,28,28,27,28,27,33,31],"Eccl":[18,26,22,16,20,12,29,17,18,20,10,14],"Song":[17,17,11,16,16,13,13,14],"Isa":[31,22,26,6,30,13,25,22,21,34,16,6,22,32,9,14,14,7,25,6,17,25,18,23,12,21,13,29,24,33,9,20,24,17,10,22,38,22,8,31,29,25,28,28,25,13,15,22,26,11,23,15,12,17,13,12,21,14,21,22,11,12,19,12,25,24],"Jer":[19,37,25,31,31,30,34,22,26,25,23,17,27,22,21,21,27,23,15,18,14,30,40,10,38,24,22,17,32,24,40,44,26,22,19,32,21,28,18,16,18,22,13,30,5,28,7,47,39,46,64,34],"Lam":[22,22,66,22,22],"Ezek":[28,10,27,17,17,14,27,18,11,22,25,28,23,23,8,63,24,32,14,49,32,31,49,27,17,21,36,26,21,26,18,32,33,31,15,38,28,23,29,49,26,20,27,31,25,24,23,35],"Dan":[21,49,30,37,31,28,28,27,27,21,45,13],"Hos":[11,23,5,19,15,11,16,14,17,15,12,14,16,9],"Joel":[20,32,21],"Amos":[15,16,15,13,27,14,17,14,15],"Obad":[21],"Jonah":[17,10,10,11],"Mic":[16,13,12,13,15,16,20],"Nah":[15,13,19],"Hab":[17,20,19],"Zeph":[18,15,20],"Hag":[15,23],"Zech":[21,13,10,14,11,15,14,23,17,12,17,14,9,21],"Mal":[14,17,18,6],"Matt":[25,23,17,25,48,34,29,34,38,42,30,50,58,36,39,28,27,35,30,34,46,46,39,51,46,75,66,20],"Mark":[45,28,35,41,43,56,37,38,50,52,33,44,37,72,47,20],"Luke":[80,52,38,44,39,49,50,56,62,42,54,59,35,35,32,31,37,43,48,47,38,71,56,53],"John":[51,25,36,54,47,71,53,59,41,42,57,50,38,31,27,33,26,40,42,31,25],"Acts":[26,47,26,37,42,15,60,40,43,48,30,25,52,28,41,40,34,28,41,38,40,30,35,27,27,32,44,31],"Rom":[32,29,31,25,21,23,25,39,33,21,36,21,14,23,33,27],"1Cor":[31,16,23,21,13,20,40,13,27,33,34,31,13,40,58,24],"2Cor":[24,17,18,18,21,18,16,24,15,18,33,21,13],"Gal":[24,21,29,31,26,18],"Eph":[23,22,21,32,33,24],"Phil":[30,30,21,23],"Col":[29,23,25,18],"1Thess":[10,20,13,18,28],"2Thess":[12,17,18],"1Tim":[20,15,16,16,25,21],"2Tim":[18,26,17,22],"Titus":[16,15,15],"Phlm":[25],"Heb":[14,18,19,16,14,20,28,13,28,39,40,29,25],"Jas":[27,26,18,17,20],"1Pet":[25,25,22,19,14],"2Pet":[21,22,18],"1John":[10,29,24,21,21],"2John":[13],"3John":[15],"Jude":[25],"Rev":[20,29,22,11,14,17,17,13,21,11,19,18,18,20,8,21,18,24,21,15,27,21]},"names":{"Gen":["Genesis","Ge"],"Exod":["Exodus","Ex"],"Lev":["Leviticus","Lv"],"Num":["Numbers","Nu"],"Deut":["Deuteronomy","Dt"],"Josh":["Joshua","Jos"],"Judg":["Judges","Jdg"],"Ruth":["Ruth"],"1Sam":["1 Samuel","1 Sam"],"2Sam":["2 Samuel","2 Sam"],"1Kgs":["1 Kings","1 Kgs"],"2Kgs":["2 Kings","2 Kgs"],"1Chr":["1 Chronicles","1 Chr"],"2Chr":["2 Chronicles","2 Chr"],"Ezra":["Ezra"],"Neh":["Nehemiah","Ne"],"Esth":["Esther","Est"],"Job":["Job"],"Ps":["Psalm","Psalms"],"Prov":["Proverbs","Pr"],"Eccl":["Ecclesiastes","Eccles"],"Song":["Song of Solomon","Song of Songs"],"Isa":["Isaiah","Is"],"Jer":["Jeremiah","Jr"],"Lam":["Lamentations"],"Ezek":["Ezekiel","Ezk"],"Dan":["Daniel","Dn"],"Hos":["Hosea"],"Joel":["Joel"],"Amos":["Amos"],"Obad":["Obadiah"],"Jonah":["Jonah"],"Mic":["Micah"],"Nah":["Nahum"],"Hab":["Habakkuk"],"Zeph":["Zephaniah"],"Hag":["Haggai"],"Zech":["Zechariah"],"Mal":["Malachi"],"Matt":["Matthew","Mt"],"Mark":["Mark","Mk"],"Luke":["Luke","Lk"],"John":["John","Jn"],"Acts":["Acts"],"Rom":["Romans","Ro"],"1Cor":["1 Corinthians","1 Cor"],"2Cor":["2 Corinthians","2 Cor"],"Gal":["Galatians"],"Eph":["Ephesians"],"Phil":["Philippians"],"Col":["Colossians"],"1Thess":["1 Thessalonians","1 Thess"],"2Thess":["2 Thessalonians","2 Thess"],"1Tim":["1 Timothy","1 Tim"],"2Tim":["2 Timothy","2 Tim"],"Titus":["Titus"],"Phlm":["Philemon"],"Heb":["Hebrews"],"Jas":["James"],"1Pet":["1 Peter","1 Pet"],"2Pet":["2 Peter","2 Pet"],"1John":["1 John","1 Jn"],"2John":["2 John","2 Jn"],"3John":["3 John","3 Jn"],"Jude":["Jude"],"Rev":["Revelation","Revelations"]}};
+/* NZ Saints and Commemorations | Version 1.6.0 */
+// Chapter limits are embedded at build time; no Bible text or remote lookup is loaded.
+function nzscReadingLinks(data){
+ const key=s=>s.toLowerCase().replace(/[.\s]/g,'');
+ const aliases=new Map(Object.entries(data.names).flatMap(([book,names])=>[book,...names].map(name=>[key(name),book])));
+ function resolve(reference){
+  let text=reference.trim().replace(/^or\s+/i,'').replace(/[–—−]/g,'-').replace(/\s*\(/g,', ').replace(/\)/g,'');
+  const match=text.match(/^((?:[123]\s*)?[A-Za-z][A-Za-z .]*?)\s*(\d[\s\S]*)$/);
+  if(!match)throw Error('Reading reference needs checking: '+reference);
+  const book=aliases.get(key(match[1]));if(!book)throw Error('Reading book needs checking: '+match[1]);
+  let body=match[2],partial=false;
+  // A doubled ff denotes continuation; a single verse letter marks a portion.
+  body=body.replace(/(\d+)\s*ff\b\.?/gi,'$1-end').replace(/(\d+)[a-z]\b/gi,(_,number)=>{partial=true;return number;}).replace(/\.(?=$|[,;])/g,'');
+  if(data.chapters[book].length===1&&!body.includes(':'))body='1:'+body;
+  if(!body.includes(':')&&/^\d+\s*(?:-\s*(?:end\.?)?|to\s+end\.?)$/i.test(body))body=body.replace(/^(\d+)/,'$1:1');
+  let chapter=Number(body.match(/^\d+/)[0]);
+  const last=()=>{const n=data.chapters[book]?.[chapter-1];if(!n)throw Error('Reading chapter needs checking: '+reference);return n;};
+  last();
+  body=body.split(/([,;])/).map(part=>{
+   const explicit=[...part.matchAll(/(\d+)\s*:/g)];if(explicit.length)chapter=Number(explicit.at(-1)[1]);
+   // In a cross-chapter range the ending chapter determines its last verse.
+   const endingChapter=part.match(/-\s*(\d+)\s*:\s*(?:end(?:\s+of\s+(?:the\s+)?chapter)?\.?\s*)?$/i);
+   if(endingChapter){chapter=Number(endingChapter[1]);return part.replace(/:\s*(?:end(?:\s+of\s+(?:the\s+)?chapter)?\.?)?\s*$/i,':'+last());}
+   return part.replace(/(?:-\s*(?:end(?:\s+of\s+(?:the\s+)?chapter)?\.?)?|\s+to\s+(?:the\s+)?end(?:\s+of\s+(?:the\s+)?chapter)?\.?)\s*$/i,()=>'-'+last()).replace(/:\s*end\.?\s*$/i,()=>':'+last());
+  }).join('');
+  return {query:match[1].trim()+' '+body,book,partial,note:partial?'Whole verse opens; use the portion shown.':''};
+ }
+ function url(references){return 'https://www.biblegateway.com/passage/?search='+encodeURIComponent(references.map(r=>resolve(r).query).join('; '))+'&version=NRSVA';}
+ function groups(editions){
+  const groups=[],seen=new Set();for(const group of editions)for(const reading of group.readings||[]){const references=reading.references.filter(ref=>{const key=reading.label+'|'+ref;if(seen.has(key))return false;seen.add(key);return true;});if(references.length)groups.push({...reading,references});}
+  const tracks=groups.filter(g=>/^(continuous|related)\b/i.test(g.label)),other=groups.filter(g=>!tracks.includes(g));
+  if(tracks.length>1){const nt=new Set(Object.keys(data.chapters).slice(39)),same=s=>s.replace(/\s+/g,' ').replace(/[–—]/g,'-').trim(),shared=tracks[0].references.filter(ref=>nt.has(resolve(ref).book)&&tracks.every(g=>g.references.some(r=>same(r)===same(ref))));
+   if(shared.length){for(const track of tracks)track.references=track.references.filter(ref=>!shared.some(r=>same(r)===same(ref)));const existing=new Set(other.flatMap(g=>g.references).map(same));const additional=shared.filter(ref=>!existing.has(same(ref)));if(additional.length)other.push({label:'New Testament and Gospel',references:additional});}
+  }
+  return {tracks,other,all:[...tracks,...other].flatMap(g=>g.references)};
+ }
+ return {resolve,url,groups};
+}
+if(typeof module==='object'&&module.exports)module.exports=nzscReadingLinks;
+
+/* NZ Saints and Commemorations | Version 1.6.0 */
+// The builder supplies the shared, approved presentation helpers in this scope.
+function nzscProductionFocus(host,config,inline={}){
+ const root=host.shadowRoot,{deduplicateEditions}=nzscPrayerMaterial(),readingLinks=nzscReadingLinks(readingReferenceData);
+ const reflection='No saint or commemoration is listed for today. You might take a moment to remember someone who has encouraged your faith.';
+ const make=(tag,cls,text)=>{const el=document.createElement(tag);el.className=cls;if(text)el.textContent=text;return el;};
+ const isPost=s=>s.label?.toLowerCase().startsWith('post');
+ const textCache=new Map(),annualCache=new Map();let annual=null,stopped=false,epoch=0,yearRequest=null,textRequest=null,renderedDate='';
+ const missingRecords=config.missingRecords;
+ function resourceFor(id){return textCache.get(id);}
+ function focusesFor(iso){return annual&&iso.startsWith(annual.year+'-')?annual.entries.filter(e=>e.startDate<=iso&&iso<=e.endDate):[];}
+ function missingBriefText(iso){return focusesFor(iso).length?'Join in the prayer focus below.':'You might take a moment to remember someone who has encouraged your faith.';}
+ function routeMissingBrief(iso){const box=root.querySelector('.nzsc-brief-panel');if(!box)return;root.querySelector('.sample-brief-invitation')?.remove();const missing=missingRecords[iso.slice(5)]||[],choice=root.querySelector('.nzsc-choice[aria-pressed="true"]');box.hidden=choice?missing.includes(choice.dataset.recordId):missing.length>0;if(box.hidden)box.before(make('p','sample-empty-message sample-brief-invitation',missingBriefText(iso)));}
+ function cancelText(){epoch++;textRequest?.abort();textRequest=null;}
+ function rememberYear(year,data){annualCache.set(year,data);while(annualCache.size>2)annualCache.delete(annualCache.keys().next().value);}
+ async function fetchFile(relative,signal){const response=await fetch(new URL(relative,config.baseUrl),{signal,credentials:'omit'});if(!response.ok){const error=Error('download');error.status=response.status;throw error;}const file=await response.json();if(file.releaseVersion!==config.version)throw Error('version');return file;}
+ async function fill(body,focus){
+  cancelText();const token=epoch,controller=new AbortController();textRequest=controller;body.replaceChildren(make('p','focus-reference','Loading the prayers…'));
+  try{let data=textCache.get(focus.textId);if(!data){data=inline.texts?.[focus.textId]||await fetchFile('prayers/'+focus.textId+'.json',controller.signal);if(data.id!==focus.textId||!data.display)throw Error('invalid');if(stopped||token!==epoch)return;textCache.set(focus.textId,data);while(textCache.size>12)textCache.delete(textCache.keys().next().value);}
+   if(stopped||token!==epoch||!body.isConnected||!body.closest('details').open)return;textRequest=null;fillMarkup(body,focus);
+  }catch(error){if(error.name==='AbortError'||stopped||token!==epoch)return;textRequest=null;body.replaceChildren(make('p','focus-reference','The prayers could not be loaded. Close and reopen this dropdown to try again.'));}
+ }
+ function historical(parent){parent.append(make('p','focus-historical-label focus-reference','Historical Material'));}
+function prayerText(parent,item,kind,label){parent.append(make('h4','',label));if(item.category)parent.append(make('p','focus-reference',item.category));const p=make('p',kind,item.text);p.lang=item.language||'en-NZ';parent.append(p);if(item.reference)parent.append(make('p','focus-reference',item.reference));if(item.sourceLabel){const source=make('p','focus-source focus-reference');if(item.sourceUrl){const a=make('a','',item.sourceLabel);a.href=item.sourceUrl;a.target='_blank';a.rel='noopener noreferrer';source.append(a);}else source.textContent=item.sourceLabel;parent.append(source);}}
+function collectGrid(body,collects,start=1){if(!collects.length)return;const grid=make('div','focus-collect-grid');collects.forEach((c,i)=>{const cell=make('section','focus-collect-cell');prayerText(cell,c,'focus-collect',collects.length>1||start>1?'Collect '+(start+i):'Collect');grid.append(cell);});body.append(grid);}
+function readingQuery(reference){return readingLinks.resolve(reference).query;}
+function readingUrl(references){return readingLinks.url(references);}
+function readingLink(label,references,cls){const a=make('a',cls,label);a.href=readingUrl(references);a.target='_blank';a.rel='noopener noreferrer';return a;}
+function copyReadings(button,text){const fallback=()=>{let field=button.parentElement.querySelector('textarea');if(!field){field=make('textarea','focus-copy-fallback');field.readOnly=true;field.setAttribute('aria-label','Reading references to copy');field.value=text;button.parentElement.append(field);}field.focus();field.select();button.textContent='Select and copy';};if(!navigator.clipboard?.writeText){fallback();return;}navigator.clipboard.writeText(text).then(()=>{if(button.isConnected)button.textContent='Copied';},()=>{if(button.isConnected)fallback();});}
+function renderReadings(body,editions){
+ const {tracks,other,all}=readingLinks.groups(editions);if(!all.length)return;
+ const area=make('section','focus-readings'),controls=make('div','focus-reading-controls');
+ controls.append(readingLink('Open all readings',all,'focus-small-control focus-open-all'));
+ const copy=make('button','focus-small-control','Copy references');copy.type='button';copy.addEventListener('click',()=>copyReadings(copy,[...tracks,...other].map(g=>g.label+'\n'+g.references.join('\n')).join('\n\n')));controls.append(copy);area.append(controls);
+ function section(parent,group){const section=make('section','focus-reading-set');section.append(make('h4','',group.label));const list=make('div','focus-reading-list');for(const ref of group.references){const row=make('div','focus-reading-row');row.append(readingLink(ref,[ref],'focus-reading'));const resolved=readingLinks.resolve(ref);if(resolved.partial)row.append(make('span','focus-reading-note focus-reference',resolved.note));const copy=make('button','focus-copy','Copy');copy.type='button';copy.setAttribute('aria-label','Copy reference '+ref);copy.addEventListener('click',()=>copyReadings(copy,ref));row.append(copy);list.append(row);}section.append(list);parent.append(section);}
+ if(tracks.length){const grid=make('div','focus-reading-tracks');for(const track of tracks)section(grid,track);area.append(grid);}
+ for(const group of other)section(area,group);
+ area.append(make('p','focus-reference','Readings open in Bible Gateway (NRSVA). Alternative passages are included when opening all.'));body.append(area);
+}
+function bilingual(body,display){
+ function row(label,en,mi){body.append(make('h4','',label));const grid=make('div','bilingual-row');for(const [item,language,title] of [[en,'en-NZ','English'],[mi,'mi','Te Reo Māori']]){if(!item)continue;const cell=make('div','bilingual-cell');cell.append(make('p','focus-language focus-reference',title));const p=make('p',label.startsWith('Collect')?'focus-collect':'focus-sentence',item.text);p.lang=language;cell.append(p);if(item.reference)cell.append(make('p','focus-reference',item.reference));grid.append(cell);}body.append(grid);}
+ const sentences=display.sentences||[],collects=display.collects||[];
+ row('Sentence',sentences.find(s=>s.language!=='mi'&&!isPost(s)),sentences.find(s=>s.language==='mi'&&!isPost(s)));
+ const english=collects.filter(c=>c.language!=='mi'),maori=collects.filter(c=>c.language==='mi');
+ row('Collect',english[0],maori[0]);collectGrid(body,english.slice(1),2);
+ row('Post Communion',sentences.find(s=>s.language!=='mi'&&isPost(s)),sentences.find(s=>s.language==='mi'&&isPost(s)));
+}
+function fillMarkup(body,focus){
+ body.replaceChildren();const display=resourceFor(focus.textId).display;
+ body.append(make('p','focus-explanation',display.explanation),make('p','focus-prompt',display.prompt));
+ if(display.materialNote)body.append(make('p','focus-material-note focus-reference',display.materialNote));
+ if(focus.textId==='waitangi'){bilingual(body,display);return;}
+ const editions=deduplicateEditions(display.editions||[{...display,edition:null}]);
+ for(const group of editions){
+  const sentences=group.sentences.filter(s=>s.language!=='mi'),collects=group.collects.filter(c=>c.language!=='mi'),prayers=group.prayers.filter(p=>p.language!=='mi');
+  if(group.edition==='historical'&&(sentences.length||collects.length||prayers.length))historical(body);
+  sentences.filter(s=>!isPost(s)).forEach(s=>prayerText(body,s,'focus-sentence','Sentence'));
+  collectGrid(body,collects);
+  for(const p of prayers)prayerText(body,p,'focus-prayer',p.label||'Prayer');
+  sentences.filter(isPost).forEach(s=>prayerText(body,s,'focus-sentence','Post Communion'));
+ }
+ renderReadings(body,editions);
+}
+const style=document.createElement('style');style.textContent=`
+.prayer-focus{border-top:1px solid #cbd5e1;margin-top:16px;padding-top:14px;min-width:0}.prayer-focus h3{font-size:17px;line-height:1.4;margin:0 0 10px;color:#334155}.focus-item,.focus-shared-panel{border:1px solid #cbd5e1;border-radius:10px;background:white;padding:12px;min-width:0}.focus-item summary{font-size:16px;line-height:1.5;font-weight:650;cursor:pointer;color:#1e293b}.prayer-focus :focus-visible{outline:3px solid #2563eb;outline-offset:3px}.prayer-focus p{margin:10px 0 0;font-size:16px;line-height:1.65}.prayer-focus h4{font-size:16px;line-height:1.5;margin:16px 0 0}.focus-range,.focus-reference{color:#64748b;font-size:14px!important;font-weight:400}.sample-empty-message{font-size:16px;line-height:1.6;margin:0;color:#475569}.prayer-focus *,.sample-empty-message{overflow-wrap:anywhere;max-width:100%}.prayer-focus .focus-collect,.prayer-focus .focus-prayer{white-space:pre-wrap}.focus-summary-line{display:inline-flex;flex-wrap:wrap;align-items:baseline;gap:4px 24px;max-width:calc(100% - 1.4em);vertical-align:top;min-width:0}.focus-label{color:#1e293b;min-width:0}.focus-local-note{color:#64748b;font-size:14px;font-weight:400;min-width:0}.sample-brief-invitation{margin-top:12px}.focus-body:empty{display:none}.focus-tabs{display:flex;align-items:stretch;gap:8px;margin-bottom:10px;min-width:0}.focus-tab{flex:1 1 0;min-width:0;border:1px solid #cbd5e1;border-radius:10px 10px 4px 4px;background:#eef2f6;color:#1e293b;font-weight:600;font-family:inherit;font-size:16px;line-height:1.5;text-align:left;padding:10px;cursor:pointer;white-space:normal}.focus-tab .focus-summary-line{display:flex;max-width:100%;gap:4px 16px}.focus-tab.is-selected{background:white;border-color:#94a3b8;box-shadow:0 4px 10px #0f172a26;position:relative;z-index:1}.focus-shared-panel[hidden]{display:none}.focus-body{container-type:inline-size}.bilingual-row{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}.bilingual-cell{min-width:0}@container(min-width:440px){.bilingual-row{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}}`;
+style.textContent+=`.prayer-focus p{margin-top:6px}.prayer-focus h4{margin-top:10px}.prayer-focus h4+p{margin-top:3px}.focus-collect-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:0 22px}.focus-collect-cell{min-width:0}.focus-reading-controls{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}.focus-small-control,.focus-copy{font:inherit;font-size:13px;line-height:1.4;color:#334155;background:#f1f5f9;border:1px solid #cbd5e1;border-radius:5px;padding:4px 7px;cursor:pointer;text-decoration:none;white-space:normal}.focus-readings a.focus-reading{color:#334155;text-decoration:underline;text-decoration-color:#94a3b8;text-underline-offset:3px}.focus-reading-list{display:grid;gap:4px;margin-top:4px}.focus-reading-row{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px;min-width:0}.focus-copy{padding:1px 5px;font-size:12px}.focus-source a{color:inherit;text-decoration:underline;text-decoration-color:#cbd5e1}.focus-copy-fallback{display:block;width:100%;min-width:0;min-height:4em;font:inherit;font-size:14px;margin-top:5px}@container(min-width:580px){.focus-collect-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.focus-collect-cell:only-child{grid-column:1/-1}}`;
+style.textContent+=`.focus-reading-tracks{display:grid;grid-template-columns:minmax(0,1fr);gap:0 22px}.focus-reading-set{min-width:0}.focus-reading-note{display:block;flex-basis:100%;line-height:1.4}@container(min-width:580px){.focus-reading-tracks{grid-template-columns:repeat(2,minmax(0,1fr))}}`;
+root.append(style);
+const titleStyle=document.createElement('style');titleStyle.textContent='.sample-title-tabs{display:flex;align-items:stretch;gap:8px;margin-bottom:14px;min-width:0}.sample-title-tabs>.nzsc-entry{display:flex;flex:1 1 0;min-width:0;margin:0;padding:0;border:0}.sample-title-tabs .nzsc-name{display:flex;width:100%;min-width:0}.sample-title-tabs .nzsc-choice{width:100%;min-width:0;padding:10px;border:1px solid #cbd5e1;border-radius:10px 10px 4px 4px;background:#eef2f6;color:#1e293b;text-decoration:none;line-height:1.4}.sample-title-tabs .nzsc-choice[aria-pressed="true"]{background:white;border-color:#94a3b8;box-shadow:0 4px 10px #0f172a26}';root.append(titleStyle);
+
+ function titleTabs(){
+ if(!focusesFor(host.dataset.civilDate).some(f=>f.selectedRecordId))return;
+ const container=root.querySelector('.nzsc-details');if(container.querySelector('.sample-title-tabs'))return;
+ const entries=[...container.querySelectorAll(':scope>.nzsc-entry')];if(entries.length<2)return;
+ const tabs=make('div','sample-title-tabs');tabs.setAttribute('role','group');tabs.setAttribute('aria-label','Select a saint or commemoration');container.insertBefore(tabs,entries[0]);tabs.append(...entries);
+}
+function focusLabel(focus){const line=make('span','focus-summary-line'),fmt=iso=>new Intl.DateTimeFormat('en-NZ',{day:'numeric',month:'short',timeZone:'Pacific/Auckland'}).format(new Date(iso+'T00:00:00Z')),term=focus.textId==='ordinands'?' (Ember Days)':focus.textId==='rogation'?' (Rogation Days)':'';line.append(make('span','focus-label',focus.display.title+term),make('span','focus-range',focus.startDate===focus.endDate?fmt(focus.startDate):fmt(focus.startDate)+' – '+fmt(focus.endDate)));if(focus.display.localNote)line.append(make('span','focus-local-note',focus.display.localNote));return line;}
+function render(iso=host.dataset.civilDate,selection){
+ root.querySelectorAll('.prayer-focus,.sample-empty-card,.focus-load-status').forEach(e=>e.remove());const date=new Date(iso+'T00:00:00Z');
+ titleTabs();
+ if(selection){const brief=root.querySelector('.nzsc-brief-panel');if(brief)brief.open=false;}
+ const selected=root.querySelector('.nzsc-choice[aria-pressed="true"]')?.dataset.recordId,focuses=focusesFor(iso).filter(f=>!f.selectedRecordId||f.selectedRecordId===selected),hasSaints=!!root.querySelector('.nzsc-name');let container=root.querySelector('.nzsc-details');
+ if(!hasSaints){root.querySelector('.nzsc-status').replaceChildren();const card=make('li','nzsc-card sample-empty-card'),badge=make('div','nzsc-badge'),label=make('div','nzsc-date');badge.setAttribute('aria-hidden','true');label.append(make('span','nzsc-month',new Intl.DateTimeFormat('en-NZ',{month:'short',timeZone:'Pacific/Auckland'}).format(date)),make('span','nzsc-day',String(Number(iso.slice(-2)))));badge.append(label,make('small','nzsc-version','v'+config.version));container=make('div','nzsc-details');container.append(make('p','sample-empty-message',focuses.length?'No saint or commemoration is listed for today. Join in the prayer focus below.':reflection));card.append(badge,container);root.querySelector('.nzsc-list').append(card);}
+ if(focuses.length){const section=make('section','prayer-focus');section.id='prayer-focus';section.setAttribute('aria-label','Prayer focus');section.append(make('h3','','Prayer focus'));
+  if(focuses.length===1){const focus=focuses[0],details=make('details','focus-item'),summary=make('summary',''),body=make('div','focus-body');details.dataset.focusId=focus.id;summary.append(focusLabel(focus));details.append(summary,body);details.addEventListener('toggle',()=>{body.replaceChildren();if(details.open)fill(body,focus);});section.append(details);}
+  else{const tabs=make('div','focus-tabs'),panel=make('details','focus-item focus-shared-panel'),summary=make('summary','','Prayers and readings'),body=make('div','focus-body');let activeFocus=null;tabs.setAttribute('role','group');tabs.setAttribute('aria-label','Select a prayer focus');panel.id='focus-selected-panel';panel.hidden=true;panel.append(summary,body);panel.addEventListener('toggle',()=>{body.replaceChildren();if(panel.open&&activeFocus)fill(body,activeFocus);});
+   focuses.forEach((focus,index)=>{const button=make('button','focus-tab');button.type='button';button.id='focus-tab-'+index;button.dataset.focusId=focus.id;button.setAttribute('aria-controls',panel.id);button.setAttribute('aria-pressed','false');button.append(focusLabel(focus));button.addEventListener('click',()=>{activeFocus=focus;panel.open=false;body.replaceChildren();for(const b of tabs.children){b.classList.remove('is-selected');b.setAttribute('aria-pressed','false');}panel.hidden=false;panel.dataset.focusId=focus.id;button.classList.add('is-selected');button.setAttribute('aria-pressed','true');panel.setAttribute('aria-label',focus.display.title+' — prayers and readings');});tabs.append(button);});if(!hasSaints)tabs.firstElementChild.click();section.append(tabs,panel);}
+  container.append(section);
+ }
+ if(hasSaints)routeMissingBrief(iso);return {hasSaints,focuses:focuses.map(e=>e.id)};
+}
+
+ async function update(force=false){
+  if(stopped)return;const iso=host.dataset.civilDate;if(!iso){cancelText();return;}
+  const year=Number(iso.slice(0,4));if(iso!==renderedDate){cancelText();renderedDate=iso;}
+  if(annualCache.has(year)&&!force){annual=annualCache.get(year);render(iso);if(!annual)notice('Prayer focus dates for '+year+' are not yet available.',false);return;}
+  if(yearRequest?.year===year&&!force){render(iso);return;}
+  yearRequest?.controller.abort();annual=null;render(iso);const controller=new AbortController(),request={year,controller};yearRequest=request;
+  try{const data=inline.annual?.[year]||await fetchFile('annual/'+year+'.json',controller.signal);if(data.year!==year||!Array.isArray(data.entries))throw Error('invalid');if(stopped||yearRequest!==request)return;rememberYear(year,data);annual=data;yearRequest=null;render(host.dataset.civilDate);
+  }catch(error){if(error.name==='AbortError'||stopped||yearRequest!==request)return;yearRequest=null;if(error.status===404){rememberYear(year,null);notice('Prayer focus dates for '+year+' are not yet available.',false);}else notice('Prayer focuses could not be loaded.',true);}
+ }
+ function notice(text,retry){const box=make('div','focus-load-status'),p=make('p','focus-reference',text);box.append(p);if(retry){const button=make('button','focus-small-control','Try again');button.type='button';button.addEventListener('click',()=>{box.remove();update(true);});box.append(button);}root.querySelector('.nzsc-details')?.append(box);}
+ function onToggle(event){if(event.target.matches?.('.focus-item')&&!event.target.open){cancelText();event.target.querySelector('.focus-body')?.replaceChildren();}}
+ function onSelect(event){if(event.target.closest?.('.focus-tab'))cancelText();}
+ function selection(){cancelText();render(host.dataset.civilDate,'selection');}
+ function destroy(){if(stopped)return;stopped=true;cancelText();yearRequest?.controller.abort();yearRequest=null;textCache.clear();annualCache.clear();host.removeEventListener('nzsc-render',onRender);host.removeEventListener('nzsc-selection',selection);host.removeEventListener('nzsc-destroy',destroy);root.removeEventListener('toggle',onToggle,true);root.removeEventListener('click',onSelect,true);root.querySelectorAll('.prayer-focus,.sample-empty-card,.focus-load-status').forEach(e=>e.remove());}
+ const onRender=()=>update();host.addEventListener('nzsc-render',onRender);host.addEventListener('nzsc-selection',selection);host.addEventListener('nzsc-destroy',destroy);root.addEventListener('toggle',onToggle,true);root.addEventListener('click',onSelect,true);update();
+}
+
+nzscProductionFocus(host,{"version":"1.6.0","baseUrl":"https://jg-911.github.io/nz-saints/v1.6.0/","missingRecords":{"01-01":["01-01-2"],"02-06":["02-06-1"],"04-25":["04-25-1"],"10-03":["10-03-1"],"10-05":["10-05-1"],"10-24":["10-24-2"]}},{});
+})();
+</script>
