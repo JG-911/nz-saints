@@ -1,53 +1,63 @@
-<!-- NZ Saints and Commemorations | Version 1.5.4 -->
-# NZ Saints and Commemorations
+<!-- NZ Saints and Commemorations | Version 1.9.0 -->
+# Approved full widget: GitHub and Weebly instructions
 
-An independent widget for a Weebly website, displaying saints and commemorations on their fixed New Zealand civil calendar dates. This folder hosts the liturgical paragraphs used by the widget. The Saints project has its own repository and does not depend on the NZPB Sundays readings project.
+Prepared locally, version **1.9.0**. Nothing has been published. Use this package for the approved full widget; older v-numbered folders, weebly-live-embed.html and the older Production Upload Guide describe the retained earlier renderer.
 
-**Prepared release: 1.5.4.** Uploading and live-site verification are carried out separately; this read me does not certify publication.
+## What to upload when you are ready
 
-## Calendar and sources
+Extract github-ready.zip. It contains just these three files, with no release folder:
 
-The widget uses today's date in **Pacific/Auckland** and displays every entry associated with that month/day. It supports multiple commemorations and source-listed alternative civil dates. It never calculates Easter, applies Sunday precedence, transfers or suppresses an entry because of an annual Lectionary decision.
+- saints-widget.html — the complete approved widget and its calendar, brief and liturgical/prayer material.
+- saints-embed.js — the small Weebly loader and automatic height adjustment.
+- README.md — these instructions for the repository.
 
-Authoritative sources:
+Upload these files into the **root of JG-911/nz-saints**, alongside any existing files. Do not upload the ZIP itself or put the files inside another github-ready folder. Keep all existing files and older folders intact: the current live embed may still use them. There are no 204 brief files to upload for this package. Do not upload any files to nzpb-sunday-lectionary.
 
-- [A New Zealand Prayer Book / He Karakia Mihinare o Aotearoa](https://anglicanprayerbook.nz/007.html).
-- [For All the Saints](https://www.anglican.org.nz/Resources/Worship-Resources-Karakia-ANZPB-HKMOA/For-All-the-Saints-A-Resource-for-the-Commemorations-of-the-Calendar), using the supplied 2019 Version 2 PDF for its **For Liturgical Use** paragraphs, and General Synod / Te Hīnota Whānui confirmed calendar additions.
-- [The official New Zealand Anglican Lectionary](https://anglican.org.nz/Resources/Worship-Resources-Karakia-ANZPB-HKMOA/Lectionary-and-Related), used for validation, including entries listed as set aside.
+## First upload — a publishing step for later
 
-Calendar coverage: **366 month/day values, 216 records and 204 distinct paragraphs**. Those paragraphs serve 210 records; alternative dates can share a paragraph. Six records have no paragraph supplied in the requested PDF section. The widget explains those gaps without inventing text. Original Māori macrons and source wording are preserved; PDF line breaks and page furniture are normalised. C.S. Lewis is recorded as **1963**; source disagreements are retained in the full validation records.
+1. Open JG-911/nz-saints on GitHub and select its existing Pages publishing branch. Check Settings → Pages if unsure; do not change a working Pages configuration.
+2. At the repository root choose Add file → Upload files. Drag in the three files from the extracted ZIP and review the changes. Root README.md will be replaced; existing application files/folders are retained.
+3. Commit only when ready to publish these files. Uploading to a branch used by Pages can publish automatically, even before changing Weebly.
+4. Wait for the Pages deployment to finish. Open https://jg-911.github.io/nz-saints/saints-widget.html and confirm the date, visible version 1.9.0, a brief, and a readings dropdown. This address has been prepared, not verified live.
+5. Only after that check, replace the existing Saints Embed Code contents in Weebly with the complete block below. Replace the Saints widget block only; leave the Sundays/Lectionary block alone. Use Edit Custom HTML, select all the old Saints code and paste this block. Do not append it to the old code.
+6. Publish Weebly only when ready. Check the published page on desktop/mobile, expand and close a panel, and check its height. A preview in the Weebly editor alone does not verify the published page.
 
-This is an independent project and is not presented as an officially endorsed Anglican publication. Hosting the extracted text does not confer a new licence over the original source material.
+## Exact Weebly replacement code
 
-## Files in this repository
+Copy the complete contents of weebly-full-widget-embed.html, or this identical block:
 
-- [v1.5.4/briefs/index.json](v1.5.4/briefs/index.json): associations between calendar record IDs and paragraph IDs, with null values for documented gaps.
-- `v1.5.4/briefs/fas-....json`: 204 separate UTF-8 paragraph files. Each contains `releaseVersion`, `id` and `brief`.
+```html
+<!-- NZ Saints and Commemorations | Version 1.9.0 | stable full-widget embed -->
+<div data-nzsc-embed style="width:100%;min-width:0;">
+  <p data-nzsc-fallback><a href="https://jg-911.github.io/nz-saints/saints-widget.html" target="_blank" rel="noopener noreferrer">Open NZ Saints and Commemorations</a></p>
+</div>
+<script src="https://jg-911.github.io/nz-saints/saints-embed.js" defer></script>
+```
 
-Keep these names and the directory structure intact. Each release has a separate versioned directory.
+The script loads the widget in a responsive frame. Its height follows the content, including opened and closed dropdowns; there is no fixed text height. A small fallback link remains if the script/frame cannot initialise. JavaScript must be allowed in the Weebly Embed Code element, as for the existing widget. The application code is served from GitHub, avoiding the editor's earlier rewriting of inline punctuation.
 
-## Weebly use and loading
+## Future updates — keep the same names
 
-The matching **weebly-embed.html** from the complete release is pasted into a Weebly **Embed Code** element. That file contains the fixed calendar, styles and widget code. It is supplied separately from this hosting folder.
+Use the same three filenames at the same repository root. There is no new v-folder for each release, and no routine Weebly code replacement. Most widget/content changes affect saints-widget.html and README.md; upload saints-embed.js only when the loader changes. The version remains recorded in metadata/read me and subdued in the date area. GitHub commit history retains earlier revisions without extra public folders.
 
-The embed for this release uses:
+**Simplest recurring workflow: GitHub Desktop.** Clone JG-911/nz-saints once. Fetch/pull existing changes before editing. Copy the new prepared files over the matching files in that local clone; retain everything else. Review the Changes list, commit the intended changes, then Push origin only when ready to publish. This sends the changes without manually uploading folders/batches. You can instead use the browser to upload only changed files to their existing paths: a matching filename/path updates that file rather than creating a numbered duplicate. Renaming it creates a separate file. GitHub still needs the changed contents; it cannot update a file that has not been supplied or edited.
 
-`https://jg-911.github.io/nz-saints/v1.5.4/briefs/`
+Stable URLs can remain cached briefly. Wait for Pages to finish, reload the page and use a hard refresh if an older version is shown. Do not create a new folder just to bypass a cache. A page already open will normally show the new application after reloading. A future change to the loader address, repository or embed contract would require a one-off Weebly change.
 
-No paragraph is downloaded until the visitor opens the dropdown. On a shared date, selecting a name switches the one brief panel to that entry. A single entry has a plain name. The widget caches only the current date's selected paragraphs, clears that cache on a date change and cancels obsolete requests. It does not download or parse the PDF, use browser storage or require API keys, Google Apps Script or third-party runtime scripts.
+Official guidance: [GitHub Desktop commits](https://docs.github.com/en/desktop/making-changes-in-a-branch/committing-and-reviewing-changes-to-your-project-in-github-desktop), [pushing changes](https://docs.github.com/en/desktop/making-changes-in-a-branch/pushing-changes-to-github-from-github-desktop), [Pages publishing source](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
 
-The layout follows the width of the Weebly element in narrow columns, portrait and landscape. Text wraps fully, and the widget grows vertically. A subdued version appears at the bottom of the date area.
+## Included behaviour and remaining source checks
 
-## Uploading and updates
+Includes the approved full review: all fixed civil-date saints and short FAS briefs, current NZPB-first sentences/collects/readings, separate closed FAS alternatives and historical material, pale blue title tabs, separate sage prayer focus, yearly focus rules, movable Corpus Christi, empty-day invitation, Auckland date/weekday and subtle version. Names/years/macrons, optional/bracketed readings and NRSVA links retain the approved handling. No date selector or review controls are shipped in the public widget.
 
-Upload **README.md** and the **v1.5.4** folder to the root of the public **JG-911/nz-saints** repository. For browser uploads, create `v1.5.4/briefs/index.json` first, then upload the 204 paragraph files into its `briefs` directory in batches of no more than 100 files. Enable GitHub Pages from **main** and **/(root)**.
+The fixed calendar has all 366 month/day keys. Leap years and non-leap century years are handled by the Gregorian civil date; a non-leap year does not invent 29 February. Movable prayer focuses use the actual year. The review's artificial Feb-29 selector can advance to a leap year; the public widget has no selector and always uses today's Auckland date.
 
-After deployment, open the hosting address above followed by **index.json**, then test a real paragraph download from the published Weebly page. A missing-file response indicates that the path or deployment needs checking.
+The complete page is about 1.1 MB before transfer compression. Brief/prayer/proper text is included in that page; closed details defer parsing/rendering, rather than downloading one file per saint. This preserves the approved local-review behaviour and avoids hundreds of manual upload files. Readings reuse the existing public Lectionary FAS reference file on demand and cache it for the widget session; no duplicate maintained FAS dataset is created here. Internet access to that existing file and Bible Gateway is still required for those external features. A failed readings request has a retry action; prayers remain available.
 
-For updates, upload the new versioned directory first, verify it, then replace the Weebly embed with the matching release. Retain the older published directory until the switch succeeds. Do not edit validated paragraph text casually or mix release versions.
+Seven individual legacy FAS alternative Psalm references remain unverified and unlinked; confirmed primary Bible references are used. Future November ordinands dates retain the documented provisional projection. The 2026 Disability Sunday liturgical pack is not silently reused in later years: the annual focus still appears, with a link for that year's resources. Full biographies and unconfirmed additional observances remain deferred. This package does not resolve those research issues by inference.
 
-## Full documentation and verification
+## Verification and rollback
 
-The complete release includes **NZ Saints_Commemorations Read Me.md**, the original project outline, newest-first change history, calendar and paragraph validation reports, source metadata, responsive source files and tests. These are maintained with the development deliverables, outside this lightweight hosting folder.
+Local checks use Chromium/WebKit and simulated cross-origin hosting/Weebly embedding. They do not claim a published Pages-to-Weebly test or physical phone verification; perform step 6 after upload. Firefox remains unverified in this Windows environment.
 
-Local release checks cover all 366 dates, original paragraph fidelity, representative container widths, shared-date selection, download retry/cancellation and instance cleanup in Chromium and WebKit. Firefox, physical devices and actual Pages-to-Weebly access are not claimed as verified by these local checks.
+Keep a copy of the old Saints Weebly code before replacement. To roll back the first switch, paste that old code back and republish; its old GitHub data paths are retained. For later updates, restore the relevant earlier GitHub commit and redeploy the same stable filenames. Review the intended commit before pushing. Do not delete old hosting folders until a separate approved cleanup confirms they are unused.
