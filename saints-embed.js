@@ -1,4 +1,4 @@
-/* NZ Saints and Commemorations | Version 1.9.5 */
+/* NZ Saints and Commemorations | Version 1.9.6 */
 // Stable external loader: Weebly does not need to interpret the widget's application code.
 (()=>{
  'use strict';

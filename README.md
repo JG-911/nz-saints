@@ -1,7 +1,7 @@
-<!-- NZ Saints and Commemorations | Version 1.9.5 -->
+<!-- NZ Saints and Commemorations | Version 1.9.6 -->
 # Approved full widget: GitHub and Weebly instructions
 
-Prepared locally, version **1.9.5**. Nothing has been published. Use this package for the approved full widget; older v-numbered folders, weebly-live-embed.html and the older Production Upload Guide describe the retained earlier renderer.
+Approved for deployment preparation, version **1.9.6**. This package contains the approved compact layout. Nothing has been uploaded or published by this preparation; both live sites remain at 1.9.5 until the GitHub files are replaced. Older v-numbered folders, weebly-live-embed.html and the older Production Upload Guide describe the retained earlier renderer.
 
 ## What to upload when you are ready
 
@@ -13,7 +13,7 @@ Extract github-ready.zip. It contains just these three files, with no release fo
 
 Upload these files into the **root of JG-911/nz-saints**, alongside any existing files. Do not upload the ZIP itself or put the files inside another github-ready folder. Keep all existing files and older folders intact: the current live embed may still use them. There are no 204 brief files to upload for this package. Do not upload any files to nzpb-sunday-lectionary.
 
-## Updating the existing installation to 1.9.5
+## Updating the existing installation to 1.9.6
 
 When ready to publish, replace these three files at the existing repository root: saints-widget.html, saints-embed.js and README.md. Use the same names and paths; do not create a version folder or delete older files. The loader is included to keep its release metadata aligned; its embedding contract is unchanged.
 
@@ -26,7 +26,7 @@ Uploading/committing to the Pages publishing branch can make this release live a
 1. Open JG-911/nz-saints on GitHub and select its existing Pages publishing branch. Check Settings → Pages if unsure; do not change a working Pages configuration.
 2. At the repository root choose Add file → Upload files. Drag in the three files from the extracted ZIP and review the changes. Root README.md will be replaced; existing application files/folders are retained.
 3. Commit only when ready to publish these files. Uploading to a branch used by Pages can publish automatically, even before changing Weebly.
-4. Wait for the Pages deployment to finish. Open https://jg-911.github.io/nz-saints/saints-widget.html and confirm the date, visible version 1.9.5, a brief, and a readings dropdown. This address has been prepared, not verified live.
+4. Wait for the Pages deployment to finish. Open https://jg-911.github.io/nz-saints/saints-widget.html and confirm the date, visible version 1.9.6, a brief, and a readings dropdown. This address has been prepared, not verified live.
 5. Only after that check, replace the existing Saints Embed Code contents in Weebly with the complete block below. Replace the Saints widget block only; leave the Sundays/Lectionary block alone. Use Edit Custom HTML, select all the old Saints code and paste this block. Do not append it to the old code.
 6. Publish Weebly only when ready. Check the published page on desktop/mobile, expand and close a panel, and check its height. A preview in the Weebly editor alone does not verify the published page.
 
@@ -35,7 +35,7 @@ Uploading/committing to the Pages publishing branch can make this release live a
 Copy the complete contents of weebly-full-widget-embed.html, or this identical block:
 
 ```html
-<!-- NZ Saints and Commemorations | Version 1.9.5 | stable full-widget embed -->
+<!-- NZ Saints and Commemorations | Version 1.9.6 | stable full-widget embed -->
 <div data-nzsc-embed style="width:100%;min-width:0;">
   <p data-nzsc-fallback><a href="https://jg-911.github.io/nz-saints/saints-widget.html" target="_blank" rel="noopener noreferrer">Open NZ Saints and Commemorations</a></p>
 </div>
@@ -56,7 +56,7 @@ Official guidance: [GitHub Desktop commits](https://docs.github.com/en/desktop/m
 
 ## Included behaviour and remaining source checks
 
-Includes the approved full review: all fixed civil-date saints and short FAS briefs, current NZPB-first sentences/collects/readings, separate closed FAS alternatives and historical material, pale blue title tabs, separate sage prayer focus, yearly focus rules, movable Corpus Christi, empty-day invitation, Auckland date/weekday and subtle version. About, Sentence, Collects, Readings and Post Communion are separate dropdowns where material is available, all closed initially. Opening Collects shows every collect. Each section has a bottom close button, with Open all/Close all controls scoped to its commemoration or prayer focus. Names/years/macrons, optional/bracketed readings and NRSVA links retain the approved handling. No date selector or review controls are shipped in the public widget.
+Includes the approved full review: all fixed civil-date saints and short FAS briefs, current NZPB-first sentences/collects/readings, separate closed FAS alternatives and historical material, pale blue title tabs, separate sage prayer focus, yearly focus rules, movable Corpus Christi, empty-day invitation, Auckland date/weekday and subtle version. About and Sentence, Collect and Readings are closed outer dropdowns. Separate Sentence, Collects, Readings and Post Communion dropdowns sit inside the latter where material is available, also closed initially. Prayer focus below uses the matching outer and nested structure. Opening Collects shows every collect. Each section has a bottom close button, with Open all/Close all controls scoped to its commemoration or prayer focus. Names/years/macrons, optional/bracketed readings and NRSVA links retain the approved handling. No date selector or review controls are shipped in the public widget.
 
 The fixed calendar has all 366 month/day keys. Leap years and non-leap century years are handled by the Gregorian civil date; a non-leap year does not invent 29 February. Movable prayer focuses use the actual year. The review's artificial Feb-29 selector can advance to a leap year; the public widget has no selector and always uses today's Auckland date.
 
